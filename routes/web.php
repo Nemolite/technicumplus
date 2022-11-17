@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/* Маршрут для главной страницы*/
+Route::get('/',[\App\Http\Controllers\MainController::class, 'index'])->name('index');
