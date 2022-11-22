@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 /* Маршрут для главной страницы*/
 Route::get('/',[\App\Http\Controllers\MainController::class, 'index'])->name('index');
+/* Маршрут для страницы новостей*/
+Route::get('/news',[\App\Http\Controllers\MainController::class, 'news'])->name('news');
+/* Маршрут для страницы наши люди */
+Route::get('/people',[\App\Http\Controllers\MainController::class, 'people'])->name('people');
+

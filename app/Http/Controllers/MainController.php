@@ -10,4 +10,14 @@ class MainController extends Controller
 
         return view('index');
     }
+
+    public function news(){
+
+        return view('news');
+    }
+
+    public function people(){
+
+        return view('people');
+    }
 }
