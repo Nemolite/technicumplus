@@ -20,4 +20,12 @@ class MainController extends Controller
 
         return view('people');
     }
+    public function konkurs() {
+
+        return view('konkurs');
+    }
+    public function proff() {
+
+        return view('proff');
+    }
 }

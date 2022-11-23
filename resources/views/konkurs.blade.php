@@ -12,11 +12,10 @@
     <link rel="stylesheet" href="{{ asset("public/css/fonts.css") }}">
     <title>Home</title>
 </head>
-<body >
-<div class="ob_glav_block">
+<body>
+<div class="ob_block_fon_konkurs">
     <!-- блок верхний с изображением и наклоном внизу -->
-    <div class="glav_block" style="background: url('{{ asset("public/image/1.png") }}') no-repeat center;"></div>
-    <!-- контейнер -->
+    <div class="fon_block_konkurs"  style="background: url('{{ asset("image/2.png") }}') no-repeat center;"></div>
     <div class="glav_conteiner">
         <!-- навигационное меню и логотип -->
         <div class="object_menu">
@@ -33,7 +32,6 @@
                     <li><a href="{{ route('proff') }}">Профессии</a></li>
                 </ul>
             </div>
-
             <!-- полное навигационное меню-аккордион -->
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
@@ -56,68 +54,74 @@
                 </div>
             </div>
         </div>
-        <div class="glav_information">
-            <div class="text">
-                <h1>Обучение - </h1><h1>В <i> отличном </i>месте?</h1>
+    </div>
+<div class="block">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
+                </div>
             </div>
         </div>
-        <div class="information">
-            <div class="image">
-                <img src="{{ asset("public/image/t.png") }}" alt="">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
+                </div>
             </div>
         </div>
     </div>
-    <!-- конец контейнера меню -->
-</div>
-<!-- Для главной страницы -->
-<div class="ob_glav_block2">
-    <div class="glav_block2">
-        <div class="glav_block2_conteiner">
-            <div class="ob_block_information">
-                <div class="block_image">
-                    <div class="krug">
-                        <img src="{{ asset("public/image/i.png") }}" alt="">
-                    </div>
-                </div>
-                <div class="glav_block2_information">
-                    <h1>Почему именно мы?</h1>
-                    <p> А всё очень просто, потому что именно мы
-                        можем обучить тебя или твоего ребенка
-                        интересной и востребованной профессии!   </p>
-                    <button>Подробнее</button>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
                 </div>
             </div>
-
-            <div class="footer">
-                <div class="footer_logo">
-                    <div class="footer_logotip">
-                        <a href="/">Technicum<strong>Plus</strong></a>
-                    </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
                 </div>
-                <div class="footer_adress">
-                    <div class="adress">
-                        <p><strong>Adress: </strong> 429120, Чувашская Республика г. Шумерля</p>
-                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
                 </div>
-                <div class="footer_sotseti">
-                    <div class="sotseti">
-                        <img src="{{ asset("public/image/telegram.png") }}" alt="" width="36" height="30">
-                        <img src="{{ asset("public/image/vk.png") }}" alt="" width="36" height="35">
-                    </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
+                    <img src="" alt="">
                 </div>
-
             </div>
         </div>
     </div>
 </div>
+</div>
+<div class="zagolovk">
+    <div class="fon">
+        <div class="col-lg-4">
+            <div class="krug_konkurs"></div>
+            <h2  class="zagolovk_konkurs">Заголовок</h2>
+            <p class="information_konkurs">Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard "fish" for Latin script texts since the
+                early 16th century. At the time, an unnamed printer created a large collection of
+                font sizes and shapes, using Lorem Ipsum to print out samples. Lorem Ipsum not only successfully survived five centuries
+                without noticeable changes, but also stepped into electronic design. It was popularized in modern times by the publication of
+                Letraset sheets with Lorem Ipsum samples in the 60s and, more recently, electronic layout programs such as Aldus PageMaker, which use Lorem Ipsum in their templates.</p>
+        </div>
+    </div>
+</div>
 
 
-<!-- бутстрап -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-
-
