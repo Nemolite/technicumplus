@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -24,5 +26,29 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function insertnews(Request $request)
+    {
+        // валидация заголовка и текста контента
+        if ( $request->isMethod('post') ) {
+            $request->validate([
+                'title'=>'string',
+                'content'=>'string',
+            ]);
+        }
+        // загрузка файла
+        if ($request->isMethod('post') && $request->file('formnews')) {
+
+            $file = $request->file('formnews');
+            $upload_folder = 'public/folder';
+            $filename = $file->getClientOriginalName(); // image.jpg
+
+            Storage::putFileAs($upload_folder, $file, $filename);
+
+        }
+        /*Создание новой записи (новой новсти)*/
+        News::create($request->all());
+        return redirect()->route('home');
     }
 }

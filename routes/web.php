@@ -24,6 +24,7 @@ Route::get('/konkurs',[\App\Http\Controllers\MainController::class, 'konkurs'])-
 /* Маршрут для страницы профессии */
 Route::get('/proff',[\App\Http\Controllers\MainController::class, 'proff'])->name('proff');
 
+/* Маршруты для панеля управления*/
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/insertnews', [App\Http\Controllers\HomeController::class, 'insertnews'])->name('insertnews');
