@@ -41,7 +41,7 @@ class HomeController extends Controller
         if ($request->isMethod('post') && $request->file('formnews')) {
 
             $file = $request->file('formnews');
-            $upload_folder = 'public/folder';
+            $upload_folder = 'public/storage/folder';
             $filename = $file->getClientOriginalName(); // image.jpg
 
             $path = Storage::putFileAs($upload_folder, $file, $filename);

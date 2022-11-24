@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -13,7 +14,11 @@ class MainController extends Controller
 
     public function news(){
 
-        return view('news');
+        $news = News::all();
+        $list_news = [
+            'news'=>$news
+        ];
+        return view('news',$list_news);
     }
 
     public function people(){

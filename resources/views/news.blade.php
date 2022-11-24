@@ -55,55 +55,22 @@
             </div>
         </div>
     </div>
+
     <div class="block">
         <div class="row">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
+            @foreach ($news as $one_news)
 
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="{{ asset($one_news->url) }}" alt="{{ $one_news->title }}">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
+            @endforeach
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

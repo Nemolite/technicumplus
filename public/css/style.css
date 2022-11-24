@@ -837,3 +837,8 @@ i{
     letter-spacing: 0.15em;
     color: white;
 }
+
+.card-body img {
+    width: 470px;
+    height: 370px;
+}
