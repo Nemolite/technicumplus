@@ -44,11 +44,16 @@ class HomeController extends Controller
             $upload_folder = 'public/folder';
             $filename = $file->getClientOriginalName(); // image.jpg
 
-            Storage::putFileAs($upload_folder, $file, $filename);
+            $path = Storage::putFileAs($upload_folder, $file, $filename);
 
         }
-        /*Создание новой записи (новой новсти)*/
-        News::create($request->all());
+        /*Создание новой записи */
+        //News::create($request->all());
+        $news = new News;
+        $news->title = $request->title;
+        $news->content = $request->txtnews;
+        $news->url = $path;
+        $news->save();
         return redirect()->route('home');
     }
 }

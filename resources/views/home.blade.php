@@ -30,8 +30,8 @@
             <input type="text" class="form-control" id="title" name="title" placeholder="Заголовок новости">
         </div>
         <div class="mb-3">
-            <label for="content" class="form-label">Текст новости</label>
-            <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+            <label for="txtnews" class="form-label">Текст новости</label>
+            <textarea class="form-control" id="txtnews" name="txtnews" rows="3"></textarea>
         </div>
         <div class="mb-3">
             <label for="formnews" class="form-label">Выберите файл изображения</label>
