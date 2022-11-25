@@ -841,4 +841,7 @@ i{
 .card-body img {
     width: 470px;
     height: 370px;
+    border-radius: 30px;
+    background-color: #5c5353;
+    margin-top: -16px;
 }

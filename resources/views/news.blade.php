@@ -63,14 +63,12 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ asset($one_news->url) }}" alt="{{ $one_news->title }}">
+                            <img src="{{ asset('public/storage/folder/'.$one_news->url) }}" alt="{{ $one_news->title }}">
                         </div>
                     </div>
                 </div>
 
             @endforeach
-
-
         </div>
     </div>
 </div>
