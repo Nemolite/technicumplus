@@ -13,13 +13,30 @@ class MainController extends Controller
     }
 
     public function news(){
-
+        //dd($id);
         $news = News::all();
+        $firstnews = News::all()->first();
+
         $list_news = [
-            'news'=>$news
+            'news'=>$news,
+            'firstnews'=>$firstnews
         ];
         return view('news',$list_news);
     }
+
+    public function newsid($id){
+
+        $news = News::all();
+        $firstnews = News::find($id);
+        $list_news = [
+            'news'=>$news,
+            'firstnews'=>$firstnews
+        ];
+
+        return view('news',$list_news);
+
+    }
+
 
     public function people(){
 

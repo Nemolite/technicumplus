@@ -60,13 +60,15 @@
         <div class="row">
             @foreach ($news as $one_news)
 
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="{{ asset('public/storage/folder/'.$one_news->url) }}" alt="{{ $one_news->title }}">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body card-body-btn"  data-id="{{ $one_news->id }}">
+                                <a href="{{ asset('news/'.$one_news->id) }}">
+                                    <img src="{{ asset('public/storage/folder/'.$one_news->url) }}" alt="{{ $one_news->title }}">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
             @endforeach
         </div>
@@ -79,20 +81,18 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-
+                            <img src="{{ asset('public/storage/folder/'.$firstnews->url) }}" alt="{{ $firstnews->title }}">
                         </div>
                     </div>
                 </div>
             </div>
-            <h2  class="zagolovk_konkurs">Заголовок</h2>
-            <p class="information_konkurs">Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard "fish" for Latin script texts since the
-                early 16th century. At the time, an unnamed printer created a large collection of
-                font sizes and shapes, using Lorem Ipsum to print out samples. Lorem Ipsum not only successfully survived five centuries
-                without noticeable changes, but also stepped into electronic design. It was popularized in modern times by the publication of
-                Letraset sheets with Lorem Ipsum samples in the 60s and, more recently, electronic layout programs such as Aldus PageMaker, which use Lorem Ipsum in their templates.</p>
+            <h2  class="zagolovk_konkurs">{{ $firstnews->title }}</h2>
+            <p class="information_konkurs">{{ $firstnews->content }}</p>
         </div>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="{{ asset("public/js/main.js") }}"></script>
+
 </body>
 </html>

@@ -17,12 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[\App\Http\Controllers\MainController::class, 'index'])->name('index');
 /* Маршрут для страницы новостей*/
 Route::get('/news',[\App\Http\Controllers\MainController::class, 'news'])->name('news');
+Route::get('/news/{id}',[\App\Http\Controllers\MainController::class, 'newsid'])->name('newsid');
 /* Маршрут для страницы наши люди */
 Route::get('/people',[\App\Http\Controllers\MainController::class, 'people'])->name('people');
 /* Маршрут для страницы конкурс */
 Route::get('/konkurs',[\App\Http\Controllers\MainController::class, 'konkurs'])->name('konkurs');
 /* Маршрут для страницы профессии */
 Route::get('/proff',[\App\Http\Controllers\MainController::class, 'proff'])->name('proff');
+/* Маршрут для получения id новости и для дальнейшей обработки и вывода*/
+//Route::get('/newsid/{id}',[\App\Http\Controllers\MainController::class, 'newsid'])->name('newsid');
 
 /* Маршруты для панеля управления*/
 Auth::routes();
