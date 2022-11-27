@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
+use App\Models\Ourpeople;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -13,7 +14,6 @@ class MainController extends Controller
     }
 
     public function news(){
-        //dd($id);
         $news = News::all();
         $firstnews = News::all()->first();
 
@@ -39,10 +39,12 @@ class MainController extends Controller
 
 
     public function people(){
+        $ourpeople = Ourpeople::all();
+        $list_people = [
+            'ourpeople'=>$ourpeople
+        ];
 
-
-
-        return view('people');
+        return view('people',$list_people);
     }
     public function konkurs() {
 

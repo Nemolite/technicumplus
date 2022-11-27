@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
+use App\Models\Ourpeople;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -58,5 +59,32 @@ class HomeController extends Controller
         $news->url = $filename;
         $news->save();
         return redirect()->route('home');
+    }
+
+    public function insertpeople(Request $request){
+        // валидация заголовка и текста контента
+        if ( $request->isMethod('post') ) {
+            $request->validate([
+                'title'=>'string',
+                'content'=>'string',
+            ]);
+        }
+        // загрузка файла
+        if ($request->isMethod('post') && $request->file('fileourpeople')) {
+
+            $file = $request->file('fileourpeople');
+            $upload_folder = 'public/folder';
+            $filename = $file->getClientOriginalName();
+            Storage::putFileAs($upload_folder, $file, $filename);
+
+        }
+
+        $news = new Ourpeople();
+        $news->title = $request->ourtitle;
+        $news->content = $request->ourtxt;
+        $news->url = $filename;
+        $news->save();
+        return redirect()->route('home');
+
     }
 }

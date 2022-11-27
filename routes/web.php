@@ -31,3 +31,4 @@ Route::get('/proff',[\App\Http\Controllers\MainController::class, 'proff'])->nam
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/insertnews', [App\Http\Controllers\HomeController::class, 'insertnews'])->name('insertnews');
+Route::post('/insertpeople', [App\Http\Controllers\HomeController::class, 'insertpeople'])->name('insertpeople');

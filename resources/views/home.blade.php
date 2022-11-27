@@ -22,7 +22,7 @@
 </div>
 @endsection
 @section('formnews')
-    <h1>Форма ввода новостей (временная)</h1>
+    <h1>Форма ввода новостей</h1>
     <form action="{{ route('insertnews') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
@@ -36,6 +36,25 @@
         <div class="mb-3">
             <label for="formnews" class="form-label">Выберите файл изображения</label>
             <input class="form-control" type="file" id="formnews" name="formnews">
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+@endsection
+@section('formourpeople')
+    <h1>Форма ввода знаменитых людей</h1>
+    <form action="{{ route('insertpeople') }}" method="post" enctype="multipart/form-data" id="forminsertpeople" name="forminsertpeople">
+        @csrf
+        <div class="mb-3">
+            <label for="ourtitle" class="form-label">Заголовок</label>
+            <input type="text" class="form-control" id="ourtitle" name="ourtitle" placeholder="Заголовок наши люди">
+        </div>
+        <div class="mb-3">
+            <label for="ourtxt" class="form-label">Текст наши люди</label>
+            <textarea class="form-control" id="ourtxt" name="ourtxt" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="fileourpeople" class="form-label">Выберите файл изображения для наших людей</label>
+            <input class="form-control" type="file" id="fileourpeople" name="fileourpeople">
         </div>
         <button type="submit" class="btn btn-primary">Сохранить</button>
     </form>
