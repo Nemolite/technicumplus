@@ -846,3 +846,22 @@ i{
     margin-top: -16px;
     cursor: pointer;
 }
+
+/*дополнение к стилям наши люди*/
+/* прибил изображение к верху, если не нужно то убрать*/
+#itemid {
+    line-height: 0px;
+    padding-top: 20px;
+}
+.our_people_title {
+    font-size: 18px;
+}
+.our_people_content {
+    font-size: 14px;
+}
+.our_people_img {
+    margin-bottom: 20px;
+    clip-path: circle(50%);
+    height: 5em;
+    width: 5em;
+}

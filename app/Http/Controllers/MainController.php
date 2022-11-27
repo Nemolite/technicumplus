@@ -40,6 +40,8 @@ class MainController extends Controller
 
     public function people(){
 
+
+
         return view('people');
     }
     public function konkurs() {
