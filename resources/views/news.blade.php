@@ -7,15 +7,16 @@
     <!-- бутстрап -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- подключение стилей -->
-    <link rel="stylesheet" href="{{ asset("public/css/style.css") }}">
+    <link rel="stylesheet" href="{{ asset("public/css/news.css") }}">
+    <link rel="stylesheet" href="{{ asset("public/css/menu.css") }}">
     <!-- подключение шрифта -->
     <link rel="stylesheet" href="{{ asset("public/css/fonts.css") }}">
-    <title>Home</title>
+    <title>Новости</title>
 </head>
 <body>
 <div class="ob_block_fon_news">
     <!-- блок верхний с изображением и наклоном внизу -->
-    <div class="fon_block_news"  style="background: url('{{ asset("image/2.png") }}') no-repeat center;"></div>
+    <div class="fon_block_news"  style="background: url('{{ asset("public/image/2.png") }}') no-repeat center;"></div>
     <div class="glav_conteiner">
         <!-- навигационное меню и логотип -->
         <div class="object_menu">
@@ -56,20 +57,14 @@
         </div>
     </div>
 
-    <div class="block">
-        <div class="row">
+    <div class="ob_news_block">
+        <div class="news_block">
             @foreach ($news as $one_news)
-
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body card-body-btn"  data-id="{{ $one_news->id }}">
-                                <a href="{{ asset('news/'.$one_news->id) }}">
-                                    <img src="{{ asset('public/storage/folder/'.$one_news->url) }}" alt="{{ $one_news->title }}">
-                                </a>
-                            </div>
+                    <a class="col-sm-6" href="{{ asset('news/'.$one_news->id) }}">
+                        <div class="card" style="background: url('{{ asset('public/storage/folder/'.$one_news->url) }}') no-repeat center;background-size: cover" alt="{{ $one_news->title }}">
+                            <div class="card-body card-body-btn"  data-id="{{ $one_news->id }}"></div>
                         </div>
-                    </div>
-
+                    </a>
             @endforeach
         </div>
     </div>
@@ -78,13 +73,9 @@
     <div class="fon">
         <div class="col-lg-4">
             <div class="krug_news">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="{{ asset('public/storage/folder/'.$firstnews->url) }}" alt="{{ $firstnews->title }}">
-                        </div>
-                    </div>
-                </div>
+                <a class="col-sm-6" href="{{ asset('news/'.$firstnews->id) }}">
+                    <div class="card" style="background: url('{{ asset('public/storage/folder/'.$firstnews->url) }}') no-repeat center;background-size: cover" alt="{{ $firstnews->title }}"></div>
+                </a>
             </div>
             <h2  class="zagolovk_konkurs">{{ $firstnews->title }}</h2>
             <p class="information_konkurs">{{ $firstnews->content }}</p>

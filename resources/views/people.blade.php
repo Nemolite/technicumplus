@@ -10,6 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- подключение стилей -->
  <link rel="stylesheet" href="{{ asset("public/css/style.css") }}">
+    <!-- подключение дополнительных стилей -->
+    <link rel="stylesheet" href="{{ asset("public/css/people.css") }}">
+    <!-- подключение стилей для меню-->
+    <link rel="stylesheet" href="{{ asset("public/css/menu.css") }}">
     <!-- подключение шрифта -->
     <link rel="stylesheet" href="{{ asset("public/css/fonts.css") }}">
     <script>
@@ -72,7 +76,6 @@
         </script>
         @foreach ($ourpeople as $one_ourpeople)
             <script>
-                console.log('{{ $one_ourpeople->title }}');
                 ourstruc = [
                     "{{ $one_ourpeople->title }}",
                     "{{ $one_ourpeople->content }}",
@@ -114,7 +117,6 @@
                     }
                     level = this.state.active - i;
 
-                    console.log(our);
                     items.push( /*#__PURE__*/React.createElement(Item, { key: index, id: this.state.items[index], level: level }));
 
 

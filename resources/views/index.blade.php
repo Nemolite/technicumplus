@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="{{ asset("public/css/style.css") }}">
     <!-- подключение шрифта -->
     <link rel="stylesheet" href="{{ asset("public/css/fonts.css") }}">
+    <!-- подключение стилей для меню-->
+    <link rel="stylesheet" href="{{ asset("public/css/menu.css") }}">
+    <!-- подключение дополнительных стилей -->
+    <link rel="stylesheet" href="{{ asset("public/css/index.css") }}">
     <title>Home</title>
 </head>
 <body >

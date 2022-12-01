@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Konkurs;
 use App\Models\News;
 use App\Models\Ourpeople;
 use Illuminate\Http\Request;
@@ -47,8 +48,24 @@ class MainController extends Controller
         return view('people',$list_people);
     }
     public function konkurs() {
+        $konkurs = Konkurs::all();
+        $firstkonkurs = Konkurs::all()->first();
 
-        return view('konkurs');
+        $list_konkurs = [
+            'konkurs'=>$konkurs,
+            'firstkonkurs'=>$firstkonkurs
+        ];
+        return view('konkurs',$list_konkurs);
+    }
+    public function konkursid($id){
+        $konkurs = Konkurs::all();
+        $firstkonkurs = Konkurs::find($id);
+        $list_konkurs = [
+            'konkurs'=>$konkurs,
+            'firstkonkurs'=>$firstkonkurs
+        ];
+        return view('konkurs',$list_konkurs);
+
     }
     public function proff() {
 

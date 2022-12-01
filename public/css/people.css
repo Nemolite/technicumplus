@@ -1,0 +1,175 @@
+.ob_block_fon{
+    background: linear-gradient(103.45deg, #00DFC4 1.9%, #EB00FF 100%);
+    height: 940px;
+    position: relative;
+    margin-bottom: -14%;
+}
+.fon_block{
+    height: 940px;
+    background-size: cover;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    filter: blur(6px);
+}
+/*стили страницы наши люди*/
+#carousel {
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.arrow {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    color: #228291;
+    line-height: 30px;
+    margin-top: 18%;
+    z-index: 11;
+}
+.arrow-right {
+    left: 1355px;
+}
+.item {
+    text-align: center;
+    color: white;
+    font-family: 'Gilroy';
+    font-size: 40px;
+    position: absolute;
+    transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
+}
+.level-2 {
+    height: 450px;
+    width: 250px;
+    line-height: 400px;
+    background:linear-gradient(180deg, rgba(45, 45, 45, 0.33) 75.52%, rgba(221, 13, 252, 0.33) 100%), rgba(59, 59, 59, 0.33);
+    left: 1080px;
+    z-index: 0;
+    border-bottom-right-radius: 20px;
+}
+.level-1 {
+    height: 550px;
+    width: 250px;
+    line-height: 550px;
+    background: linear-gradient(180deg, rgba(59, 59, 59, 0.33) 68.75%, rgba(189, 44, 244, 0.33) 100%, rgba(176, 56, 241, 0.33) 100%), rgba(59, 59, 59, 0.33);
+    left: 830px;
+    z-index: 1;
+    border-bottom-right-radius: 20px;
+}
+.level0 {
+    height: 600px;
+    width: 280px;
+    line-height: 600px;
+    background: rgba(59, 59, 59, 0.24);;
+    left: 550px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 2;
+}
+.level1 {
+    height: 550px;
+    width: 250px;
+    line-height: 550px;
+    background: linear-gradient(180deg, rgba(59, 59, 59, 0.33) 70.31%, rgba(88, 140, 219, 0.33) 100%), rgba(59, 59, 59, 0.33);
+    left: 300px;
+    z-index: 1;
+    border-bottom-left-radius: 20px;
+}
+.level2 {
+    height: 450px;
+    width: 250px;
+    line-height: 400px;
+    background: linear-gradient(179.99deg, rgba(45, 45, 45, 0.33) 73.44%, rgba(56, 171, 210, 0.33) 100%), rgba(59, 59, 59, 0.33);
+    left: 50px;
+    z-index: 0;
+    border-bottom-left-radius: 20px;
+}
+.left-enter {
+    opacity: 0;
+    left: -60px;
+    height: 120px;
+    width: 90px;
+    line-height: 120px;
+    margin-top: 40px;
+}
+.left-enter.left-enter-active {
+    opacity: 1;
+    left: 50px;
+    height: 150px;
+    width: 110px;
+    line-height: 150px;
+    margin-top: 25px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+.left-leave {
+    opacity: 1;
+    left: 650px;
+    height: 150px;
+    width: 110px;
+    line-height: 150px;
+    margin-top: 25px;
+}
+.left-leave.left-leave-active {
+    left: 780px;
+    opacity: 0;
+    height: 120px;
+    line-height: 120px;
+    margin-top: 40px;
+    width: 90px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+.right-enter {
+    opacity: 0;
+    left: 760px;
+    height: 120px;
+    width: 90px;
+}
+.right-enter.right-enter-active {
+    left: 1000px;
+    opacity: 1;
+    height: 450px;
+    line-height: 400px;
+    width: 250px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+.right-leave {
+    left: 50px;
+    height: 450px;
+    opacity: 1;
+    margin-top: 25px;
+    line-height: 0px;
+    width: 110px;
+}
+.right-leave.right-leave-active {
+    left: -60px;
+    opacity: 0;
+    height: 120px;
+    width: 90px;
+    line-height: 120px;
+    margin-top: 40px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+.noselect {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.fi-arrow-right,.fi-arrow-left{
+    padding-left: 8px;
+    padding-right: 8px;
+}

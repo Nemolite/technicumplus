@@ -1,0 +1,210 @@
+/* фоон */
+.ob_block_fon_proff{
+    background: linear-gradient(103.45deg, #00DFC4 1.9%, #EB00FF 100%);
+    height: 1340px;
+    position: relative;
+    margin-bottom: -14%;
+}
+.fon_block_proff{
+    height: 1300px;
+    background-size: cover;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    filter: blur(6px);
+}
+/*стили страницы профессии*/
+.proff_class{
+    position: relative;
+}
+.block_information_proff_l{
+    position: absolute;
+}
+.menuli{
+    position: relative;
+    width: 1080px;
+    height: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1111;
+    margin-left: 8.5%;
+}
+.menuli li{
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transform-origin: 550px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(80px);
+    z-index: 1111;
+}
+.menuli.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    z-index: 1111;
+}
+.menuli li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    background: #fff;
+    border-radius: 50%;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    color: #111;
+    transition: 0.5s;
+    z-index: 1111;
+}
+.menuli li a:hover {
+    color: white;
+    background: linear-gradient(45deg,#8460ed,#ff1252);
+    z-index: 1111;
+}
+.toggle {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(0,0,0,0.15);
+    font-size: 2em;
+    transition: transform 1.25s;
+    z-index: 1111;
+}
+/* стили текста для блоков */
+.h1_proff{
+    padding: 5%;
+    float: right;
+    font-size: 1.5rem;
+    font-family: 'Gilroy';
+    padding-bottom: 3%;
+}
+.h2_proff{
+    padding: 5%;
+    float: left;
+    font-size: 1.5rem;
+    font-family: 'Gilroy';
+    padding-bottom: 3%;
+}
+.p_b_proff{
+    float: right;
+    padding: 6.5%;
+    padding-top: 0;
+    padding-bottom: 1.5%;
+    width: 550px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Gilroy';
+}
+.l-1{
+    float: left;
+    padding-left: 5%;
+    width: 58%;
+    font-family: 'Gilroy';
+}
+.l-2{
+    float: right;
+    width: 25%;
+    padding-right: 0;
+    font-family: 'Gilroy';
+}
+/*первый текст */
+.information_proff_l1 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 300px;
+    background: #3B3B3B;
+    border-radius: 30px;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgb(0 0 0 / 15%);
+    color: #fff;
+    transition: 0.5s;
+    position: absolute;
+    z-index: 111;
+    margin-top: 5%;
+    margin-left: 3%;
+}
+/*второй текст */
+.information_proff_l2 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 300px;
+    background: #3B3B3B;
+    border-radius: 30px;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgb(0 0 0 / 15%);
+    color: #fff;
+    transition: 0.5s;
+    position: absolute;
+    z-index: 111;
+    margin-top: 25%;
+    margin-left: 210%;
+}/*третий текст */
+.information_proff_l3 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 300px;
+    background: #3B3B3B;
+    border-radius: 30px;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgb(0 0 0 / 15%);
+    color: #fff;
+    transition: 0.5s;
+    position: absolute;
+    z-index: 111;
+    margin-top: 80.5%;
+    margin-left: 233%;
+}
+/*четвертый текст */
+.information_proff_l4 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 300px;
+    background: #3B3B3B;
+    border-radius: 30px;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgb(0 0 0 / 15%);
+    color: #fff;
+    transition: 0.5s;
+    position: absolute;
+    z-index: 111;
+    margin-top: 138.5%;
+    margin-left: 210%;
+}
+/*пятый текст */
+.information_proff_l5 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 280px;
+    background: #3B3B3B;
+    border-radius: 30px;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgb(0 0 0 / 15%);
+    color: #fff;
+    transition: 0.5s;
+    position: relative;
+    z-index: 111;
+    margin-top: 160%;
+    margin-left: 3%;
+}

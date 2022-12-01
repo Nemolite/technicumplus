@@ -858,6 +858,7 @@ i{
 }
 .our_people_content {
     font-size: 14px;
+    line-height: 1.5;
 }
 .our_people_img {
     margin-bottom: 20px;
@@ -865,3 +866,14 @@ i{
     height: 5em;
     width: 5em;
 }
+/*дополнение к стилям конкурсы*/
+
+.krug_konkurs img {
+    width: 400px;
+    height: 400px;
+    background: white;
+    border-radius: 50%;
+    margin-right: 100px;
+}
+
+/*Стили админки*/

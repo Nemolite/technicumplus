@@ -1,0 +1,171 @@
+/* фоон */
+.ob_glav_block{
+    background: linear-gradient(103.45deg, #00DFC4 1.9%, #EB00FF 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 70%);
+    height: 800px;
+    position: relative;
+    margin-bottom: -14%;
+}
+.glav_block{
+    height: 800px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 70%);
+    background-size:cover;
+    position: absolute;
+    z-index: 10;
+    bottom:0;
+    left:0;
+    right:0;
+    top:0;
+    filter: blur(6px);
+}
+/* стили главной страницы */
+.glav_information {
+    margin-top: 110px;
+    position: relative;
+    width: 50%;
+}
+.text{
+    color: #FFFFFF;
+}
+.text h1{
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 86px;
+    line-height: 86px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: relative;
+    text-shadow: 0px 85px 97px rgba(0, 0, 0, 0.07), 0px 42.5415px 48.5474px rgba(0, 0, 0, 0.0532233), 0px 25.625px 29.2427px rgba(0, 0, 0, 0.0456112), 0px 16.4219px 18.7402px rgba(0, 0, 0, 0.0399626), 0px 10.6433px 12.1459px rgba(0, 0, 0, 0.035), 0px 6.69985px 7.64571px rgba(0, 0, 0, 0.0300374), 0px 3.84948px 4.39294px rgba(0, 0, 0, 0.0243888), 0px 1.69426px 1.93344px rgba(0, 0, 0, 0.0167767);
+}
+i{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 500;
+    font-family: 'Gilroy';
+}
+.information{
+    float: right;
+    margin-top: -29.5%;
+    width: 82%;
+    position: relative;
+}
+.image img {
+    width: 99%;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 7%;
+}
+/* второй блок */
+.ob_glav_block2{
+    clip-path: polygon(0 0, 100% 21%, 100% 100%, 0 100%);
+    background: #3c3b3b;
+    height: 750px;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+}
+.glav_block2_conteiner{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 200px;
+}
+.ob_block_information{
+    height: 420px;
+}
+.block_image{
+    float: left;
+    margin-right: 5%;
+}
+.krug{
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(103.45deg, #00DFC4 1.9%, #EB00FF 100%);
+    border-radius: 50%;
+    margin-top: -5%;
+}
+.krug img{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1.65%;
+    border-radius: 145px;
+}
+.glav_block2_information h1{
+    color: #3c3b3b;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    font-size: 70px;
+    font-family: 'Gilroy';
+    text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff;
+}
+.glav_block2_information p{
+    font-family: 'Gilroy';
+    line-height: 45px;
+    font-size: 35px;
+    font-weight: 400;
+    align-items: center;
+    color: #fff;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    letter-spacing: 0.1em;
+}
+.glav_block2_information button{
+    width: 300px;
+    height: 68px;
+    background: linear-gradient(103.45deg, #00DFC4 1.9%, #EB00FF 100%);
+    color: white;
+    border-radius: 58px;
+    border: none;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    /*margin-top: 5%;*/
+}
+/* футер */
+.footer_logotip {
+    width: 10%;
+    margin-top: 41px;
+    z-index: 100;
+    cursor: pointer;
+}
+.footer_logo{
+    float: left;
+    width: 32%;
+}
+.footer_logotip a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Gilroy';
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 43px;
+}
+.footer_adress{
+    float: left;
+    width: 32%;
+    padding-top: 3.5%;
+}
+.adress p{
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    color: white;
+    letter-spacing: 0.1em;
+}
+.footer_sotseti{
+    padding-top: 45px;
+    float: right;
+    width: 10%;
+}
+.sotseti img{
+    margin-right: 10%;
+}

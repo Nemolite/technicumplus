@@ -22,6 +22,7 @@ Route::get('/news/{id}',[\App\Http\Controllers\MainController::class, 'newsid'])
 Route::get('/people',[\App\Http\Controllers\MainController::class, 'people'])->name('people');
 /* Маршрут для страницы конкурс */
 Route::get('/konkurs',[\App\Http\Controllers\MainController::class, 'konkurs'])->name('konkurs');
+Route::get('/konkurs/{id}',[\App\Http\Controllers\MainController::class, 'konkursid'])->name('konkursid');
 /* Маршрут для страницы профессии */
 Route::get('/proff',[\App\Http\Controllers\MainController::class, 'proff'])->name('proff');
 /* Маршрут для получения id новости и для дальнейшей обработки и вывода*/
@@ -32,3 +33,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/insertnews', [App\Http\Controllers\HomeController::class, 'insertnews'])->name('insertnews');
 Route::post('/insertpeople', [App\Http\Controllers\HomeController::class, 'insertpeople'])->name('insertpeople');
+Route::post('/insertkonkurs', [App\Http\Controllers\HomeController::class, 'insertkonkurs'])->name('insertkonkurs');
+Route::get('/editnews/{id}',[\App\Http\Controllers\HomeController::class, 'editnews'])->name('editnews');
+Route::post('/updatenews',[\App\Http\Controllers\HomeController::class, 'updatenews'])->name('updatenews');

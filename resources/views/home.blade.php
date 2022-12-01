@@ -59,3 +59,57 @@
         <button type="submit" class="btn btn-primary">Сохранить</button>
     </form>
 @endsection
+@section('formkonkurs')
+    <h1>Форма ввода конкурсов</h1>
+    <form action="{{ route('insertkonkurs') }}" method="post" enctype="multipart/form-data" id="forminsertkonkurs" name="forminsertkonkurs">
+        @csrf
+        <div class="mb-3">
+            <label for="konkurstitle" class="form-label">Заголовок конкурса</label>
+            <input type="text" class="form-control" id="konkurstitle" name="konkurstitle" placeholder="Заголовок конкурса">
+        </div>
+        <div class="mb-3">
+            <label for="konkurstxt" class="form-label">Текст конкурса</label>
+            <textarea class="form-control" id="konkurstxt" name="konkurstxt" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="filekonkurs" class="form-label">Выберите файл изображения для конкурса</label>
+            <input class="form-control" type="file" id="filekonkurs" name="filekonkurs">
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+@endsection
+<!-- Вывод новостей, удаление и корректировка-->
+@section('listnews')
+    <h1>Вывод новостей, удаление и корректировка</h1>
+    <table class="table-primary">
+        <thead>
+        <tr>
+            <th scope="col">№пп</th>
+            <th scope="col">ID</th>
+            <th scope="col">Заголовок</th>
+            <th scope="col">Текст</th>
+            <th scope="col">Корректировать</th>
+            <th scope="col">Удалить</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ($news as $one_news)
+            <tr>
+                <th scope="row">{{ $loop->index }}</th>
+                <td>{{ $one_news->id }}</td>
+                <td>{{ $one_news->title }}</td>
+                <td>{{ $one_news->content }}</td>
+                <td>
+                    <a href="{{ asset('editnews/'.$one_news->id) }}">Изменить</a>
+                </td>
+                <td>
+                    <a href="">Удалить</a>
+                </td>
+            </tr>
+        @endforeach
+
+
+        </tbody>
+    </table>
+
+@endsection

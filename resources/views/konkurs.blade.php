@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset("public/css/style.css") }}">
     <!-- подключение шрифта -->
     <link rel="stylesheet" href="{{ asset("public/css/fonts.css") }}">
+    <!-- подключение стилей для меню-->
+    <link rel="stylesheet" href="{{ asset("public/css/menu.css") }}">
     <title>Home</title>
 </head>
 <body>
@@ -57,66 +59,31 @@
     </div>
 <div class="block">
     <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
+        @foreach ($konkurs as $one_konkurs)
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="{{ asset('konkurs/'.$one_konkurs->id) }}">
+                            <img src="{{ asset('public/storage/folder/'.$one_konkurs->url) }}" alt="{{ $one_konkurs->title }}">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
-                </div>
-            </div>
-        </div>
+        @endforeach
+
     </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">КОНКУРС ВИДЕОРОЛИКОВ</h5>
-                    <img src="" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
+
+
 </div>
 </div>
 <div class="zagolovk">
     <div class="fon">
         <div class="col-lg-4">
-            <div class="krug_konkurs"></div>
-            <h2  class="zagolovk_konkurs">Заголовок</h2>
-            <p class="information_konkurs">Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard "fish" for Latin script texts since the
-                early 16th century. At the time, an unnamed printer created a large collection of
-                font sizes and shapes, using Lorem Ipsum to print out samples. Lorem Ipsum not only successfully survived five centuries
-                without noticeable changes, but also stepped into electronic design. It was popularized in modern times by the publication of
-                Letraset sheets with Lorem Ipsum samples in the 60s and, more recently, electronic layout programs such as Aldus PageMaker, which use Lorem Ipsum in their templates.</p>
+            <div class="krug_konkurs">
+                <img src="{{ asset('public/storage/folder/'.$firstkonkurs->url) }}" alt="{{ $firstkonkurs->title }}">
+            </div>
+            <h2  class="zagolovk_konkurs">{{ $firstkonkurs->title }}</h2>
+            <p class="information_konkurs">{{ $firstkonkurs->content }}</p>
         </div>
     </div>
 </div>
