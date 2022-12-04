@@ -113,3 +113,39 @@
     </table>
 
 @endsection
+
+<!-- Вывод знаменитых людей, удаление и корректировка-->
+@section('listourpeople')
+    <h1>Вывод знаменитых людей, удаление и корректировка</h1>
+    <table class="table-primary">
+        <thead>
+        <tr>
+            <th scope="col">№пп</th>
+            <th scope="col">ID</th>
+            <th scope="col">Заголовок</th>
+            <th scope="col">Текст</th>
+            <th scope="col">Корректировать</th>
+            <th scope="col">Удалить</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ($ourpeople as $one_ourpeople)
+            <tr>
+                <th scope="row">{{ $loop->index }}</th>
+                <td>{{ $one_ourpeople->id }}</td>
+                <td>{{ $one_ourpeople->title }}</td>
+                <td>{{ $one_ourpeople->content }}</td>
+                <td>
+                    <a href="{{ asset('editourpeople/'.$one_ourpeople->id) }}">Изменить</a>
+                </td>
+                <td>
+                    <a href="{{ asset('deleteop/'.$one_ourpeople->id) }}">Удалить</a>
+                </td>
+            </tr>
+        @endforeach
+
+
+        </tbody>
+    </table>
+
+@endsection

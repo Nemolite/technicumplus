@@ -28,10 +28,12 @@ class HomeController extends Controller
     public function index()
     {
         $news = News::all();
-        $list_news = [
-            'news'=>$news
+        $ourpeople = Ourpeople::all();
+        $list_all = [
+            'news'=>$news,
+            'ourpeople'=>$ourpeople
         ];
-        return view('home',$list_news);
+        return view('home',$list_all);
     }
 
     public function insertnews(Request $request)
@@ -114,9 +116,6 @@ class HomeController extends Controller
 
         return redirect()->route('home');
     }
-
-
-
     /* Добавление "наши люди"*/
     public function insertpeople(Request $request){
         // валидация заголовка и текста контента
@@ -136,13 +135,55 @@ class HomeController extends Controller
 
         }
 
-        $news = new Ourpeople();
-        $news->title = $request->ourtitle;
-        $news->content = $request->ourtxt;
-        $news->url = $filename;
-        $news->save();
+        $ourpeople = new Ourpeople();
+        $ourpeople->title = $request->ourtitle;
+        $ourpeople->content = $request->ourtxt;
+        $ourpeople->url = $filename;
+        $ourpeople->save();
         return redirect()->route('home');
 
+    }
+
+    public function editourpeople($id){
+        $ourpeople = Ourpeople::find($id);
+        $one_ourpeople = [
+            'oneourpeople'=>$ourpeople
+        ];
+
+        return view('ourpeople',$one_ourpeople);
+    }
+
+    public function updateoneourpeople(Request $request){
+        if ( $request->isMethod('post') ) {
+            $request->validate([
+                'title'=>'string',
+                'content'=>'string',
+            ]);
+        }
+        // загрузка нового файла
+        if ($request->isMethod('post') && $request->file('fileop')) {
+
+            $file = $request->file('fileop');
+            $upload_folder = 'public/folder';
+            $filename = $file->getClientOriginalName();
+            Storage::putFileAs($upload_folder, $file, $filename);
+
+        }
+        $id = $request->formopid;
+        $op = News::find($id);
+        $op->title = $request->titleop;
+        $op->content = $request->txtop;
+        $op->url = $filename;
+        $op->save();
+
+        return redirect()->route('home');
+    }
+    public function deleteop($id){
+        $op = Ourpeople::find($id);
+        if ($op) {
+            $op->delete();
+        }
+        return redirect()->route('home');
     }
     /* Добавление конкурс*/
     public function insertkonkurs(Request $request){

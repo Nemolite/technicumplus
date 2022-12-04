@@ -85,6 +85,8 @@
             @yield('formourpeople')
             @yield('formkonkurs')
             @yield('listnews')
+            @yield('listourpeople')
+
         </div>
         <p></p>
         <p></p>
