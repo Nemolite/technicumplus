@@ -149,3 +149,39 @@
     </table>
 
 @endsection
+
+<!-- Вывод конкурсов, удаление и корректировка-->
+@section('listkonkurs')
+    <h1>Вывод конкурсов, удаление и корректировка</h1>
+    <table class="table-primary">
+        <thead>
+        <tr>
+            <th scope="col">№пп</th>
+            <th scope="col">ID</th>
+            <th scope="col">Заголовок</th>
+            <th scope="col">Текст</th>
+            <th scope="col">Корректировать</th>
+            <th scope="col">Удалить</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ($konkurs as $one_konkurs)
+            <tr>
+                <th scope="row">{{ $loop->index }}</th>
+                <td>{{ $one_konkurs->id }}</td>
+                <td>{{ $one_konkurs->title }}</td>
+                <td>{{ $one_konkurs->content }}</td>
+                <td>
+                    <a href="{{ asset('editkonkurs/'.$one_konkurs->id) }}">Изменить</a>
+                </td>
+                <td>
+                    <a href="{{ asset('deletekonkurs/'.$one_konkurs->id) }}">Удалить</a>
+                </td>
+            </tr>
+        @endforeach
+
+
+        </tbody>
+    </table>
+
+@endsection

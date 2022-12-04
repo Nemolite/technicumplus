@@ -29,9 +29,11 @@ class HomeController extends Controller
     {
         $news = News::all();
         $ourpeople = Ourpeople::all();
+        $konkurs = Konkurs::all();
         $list_all = [
             'news'=>$news,
-            'ourpeople'=>$ourpeople
+            'ourpeople'=>$ourpeople,
+            'konkurs'=>$konkurs
         ];
         return view('home',$list_all);
     }
@@ -170,7 +172,7 @@ class HomeController extends Controller
 
         }
         $id = $request->formopid;
-        $op = News::find($id);
+        $op = Ourpeople::find($id);
         $op->title = $request->titleop;
         $op->content = $request->txtop;
         $op->url = $filename;
@@ -211,4 +213,50 @@ class HomeController extends Controller
         return redirect()->route('home');
 
     }
+
+    public function editkonkurs($id){
+        $konkurs = Konkurs::find($id);
+        $one_konkurs = [
+            'onekonkurs'=>$konkurs
+        ];
+
+        return view('konkursedit',$one_konkurs);
+    }
+
+    public function updatekonkurs(Request $request){
+        if ( $request->isMethod('post') ) {
+            $request->validate([
+                'title'=>'string',
+                'content'=>'string',
+            ]);
+        }
+        // загрузка нового файла
+        if ($request->isMethod('post') && $request->file('filek')) {
+
+            $file = $request->file('filek');
+            $upload_folder = 'public/folder';
+            $filename = $file->getClientOriginalName();
+            Storage::putFileAs($upload_folder, $file, $filename);
+
+        }
+        $id = $request->formkid;
+        $konkurs = Konkurs::find($id);
+        $konkurs->title = $request->titlek;
+        $konkurs->content = $request->txtk;
+        $konkurs->url = $filename;
+        $konkurs->save();
+
+        return redirect()->route('home');
+    }
+
+    public function deletekonkurs($id){
+        $konkurs = Konkurs::find($id);
+        if ($konkurs) {
+            $konkurs->delete();
+        }
+        return redirect()->route('home');
+
+    }
+
+
 }

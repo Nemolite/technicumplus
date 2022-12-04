@@ -8,15 +8,15 @@
     <title>Edit</title>
 </head>
 <body>
-<h1>Форма корректировки и удаления новости</h1>
+<h1>Форма корректировки и удаления знаменитых людей</h1>
 <form action="{{ route('updateoneourpeople') }}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="mb-3">
-        <label for="titleop" class="form-label">Заголовок новости</label>
+        <label for="titleop" class="form-label">Заголовок знаменитые люди</label>
         <input type="text" class="form-control" id="titleop" name="titleop" placeholder="{{ $oneourpeople->title }}" value="{{ $oneourpeople->title }}">
     </div>
     <div class="mb-3">
-        <label for="txtop" class="form-label">Текст новости</label>
+        <label for="txtop" class="form-label">Текст знаменитые люди</label>
         <textarea class="form-control" id="txtop" name="txtop" rows="3" placeholder="{{ $oneourpeople->content }}" value="{{ $oneourpeople->content }}"></textarea>
     </div>
     <div class="mb-3">
@@ -24,7 +24,7 @@
         <label for="fileop" class="form-label">Выберите другой файл изображения</label>
         <input class="form-control" type="file" id="fileop" name="fileop">
     </div>
-    <input type="hidden" id="formopid" name="formopid"value="{{ $oneourpeople->id }}">
+    <input type="hidden" id="formopid" name="formopid" value="{{ $oneourpeople->id }}">
     <button type="submit" class="btn btn-primary">Изменить и Сохранить</button>
     <button type="submit" class="btn btn-danger"><a href="{{ asset('deleteop/'.$oneourpeople->id) }}">Удалить</a></button>
 </form>

@@ -40,6 +40,10 @@ Route::get('/deletenews/{id}',[\App\Http\Controllers\HomeController::class, 'del
 Route::get('/editourpeople/{id}',[\App\Http\Controllers\HomeController::class, 'editourpeople'])->name('editourpeople');
 Route::post('/updateoneourpeople',[\App\Http\Controllers\HomeController::class, 'updateoneourpeople'])->name('updateoneourpeople');
 Route::get('/deleteop/{id}',[\App\Http\Controllers\HomeController::class, 'deleteop'])->name('deleteop');
+Route::get('/editkonkurs/{id}',[\App\Http\Controllers\HomeController::class, 'editkonkurs'])->name('editkonkurs');
+Route::get('/deletekonkurs/{id}',[\App\Http\Controllers\HomeController::class, 'deletekonkurs'])->name('deletekonkurs');
+Route::post('/updatekonkurs',[\App\Http\Controllers\HomeController::class, 'updatekonkurs'])->name('updatekonkurs');
+
 
 
 
