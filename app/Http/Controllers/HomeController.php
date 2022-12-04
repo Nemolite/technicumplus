@@ -38,6 +38,7 @@ class HomeController extends Controller
         return view('home',$list_all);
     }
 
+    /* Добавление новости */
     public function insertnews(Request $request)
     {
         // валидация заголовка и текста контента
@@ -89,6 +90,7 @@ class HomeController extends Controller
 
     }
 
+    /*Обновление одной новости*/
     public function updatenews(Request $request){
         if ( $request->isMethod('post') ) {
             $request->validate([
@@ -118,6 +120,7 @@ class HomeController extends Controller
 
         return redirect()->route('home');
     }
+
     /* Добавление "наши люди"*/
     public function insertpeople(Request $request){
         // валидация заголовка и текста контента
@@ -145,7 +148,7 @@ class HomeController extends Controller
         return redirect()->route('home');
 
     }
-
+    /* Редактирование "наши люди"*/
     public function editourpeople($id){
         $ourpeople = Ourpeople::find($id);
         $one_ourpeople = [
@@ -154,7 +157,7 @@ class HomeController extends Controller
 
         return view('ourpeople',$one_ourpeople);
     }
-
+    /* Обновление "наши люди"*/
     public function updateoneourpeople(Request $request){
         if ( $request->isMethod('post') ) {
             $request->validate([
@@ -180,6 +183,7 @@ class HomeController extends Controller
 
         return redirect()->route('home');
     }
+    /* Удаление "наши люди"*/
     public function deleteop($id){
         $op = Ourpeople::find($id);
         if ($op) {
@@ -187,7 +191,7 @@ class HomeController extends Controller
         }
         return redirect()->route('home');
     }
-    /* Добавление конкурс*/
+    /* Добавление конкурса*/
     public function insertkonkurs(Request $request){
         // валидация заголовка и текста контента
         if ( $request->isMethod('post') ) {
@@ -213,7 +217,7 @@ class HomeController extends Controller
         return redirect()->route('home');
 
     }
-
+    /* Редактирование конкурса*/
     public function editkonkurs($id){
         $konkurs = Konkurs::find($id);
         $one_konkurs = [
@@ -222,7 +226,7 @@ class HomeController extends Controller
 
         return view('konkursedit',$one_konkurs);
     }
-
+    /* Обновление конкурса*/
     public function updatekonkurs(Request $request){
         if ( $request->isMethod('post') ) {
             $request->validate([
@@ -248,15 +252,12 @@ class HomeController extends Controller
 
         return redirect()->route('home');
     }
-
+    /* Удаление конкурса*/
     public function deletekonkurs($id){
         $konkurs = Konkurs::find($id);
         if ($konkurs) {
             $konkurs->delete();
         }
         return redirect()->route('home');
-
     }
-
-
 }

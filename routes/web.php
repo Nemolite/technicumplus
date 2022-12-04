@@ -31,15 +31,19 @@ Route::get('/proff',[\App\Http\Controllers\MainController::class, 'proff'])->nam
 /* Маршруты для панеля управления*/
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/* Новости в админке*/
 Route::post('/insertnews', [App\Http\Controllers\HomeController::class, 'insertnews'])->name('insertnews');
-Route::post('/insertpeople', [App\Http\Controllers\HomeController::class, 'insertpeople'])->name('insertpeople');
-Route::post('/insertkonkurs', [App\Http\Controllers\HomeController::class, 'insertkonkurs'])->name('insertkonkurs');
 Route::get('/editnews/{id}',[\App\Http\Controllers\HomeController::class, 'editnews'])->name('editnews');
 Route::post('/updatenews',[\App\Http\Controllers\HomeController::class, 'updatenews'])->name('updatenews');
 Route::get('/deletenews/{id}',[\App\Http\Controllers\HomeController::class, 'deletenews'])->name('deletenews');
+/* Наши люди в админке*/
+Route::post('/insertpeople', [App\Http\Controllers\HomeController::class, 'insertpeople'])->name('insertpeople');
 Route::get('/editourpeople/{id}',[\App\Http\Controllers\HomeController::class, 'editourpeople'])->name('editourpeople');
 Route::post('/updateoneourpeople',[\App\Http\Controllers\HomeController::class, 'updateoneourpeople'])->name('updateoneourpeople');
 Route::get('/deleteop/{id}',[\App\Http\Controllers\HomeController::class, 'deleteop'])->name('deleteop');
+/* Конкурсы в админке*/
+Route::post('/insertkonkurs', [App\Http\Controllers\HomeController::class, 'insertkonkurs'])->name('insertkonkurs');
 Route::get('/editkonkurs/{id}',[\App\Http\Controllers\HomeController::class, 'editkonkurs'])->name('editkonkurs');
 Route::get('/deletekonkurs/{id}',[\App\Http\Controllers\HomeController::class, 'deletekonkurs'])->name('deletekonkurs');
 Route::post('/updatekonkurs',[\App\Http\Controllers\HomeController::class, 'updatekonkurs'])->name('updatekonkurs');
