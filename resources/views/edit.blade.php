@@ -26,6 +26,7 @@
     </div>
     <input type="hidden" id="formnewsid" name="formnewsid"value="{{ $onenews->id }}">
     <button type="submit" class="btn btn-primary">Изменить и Сохранить</button>
+    <button type="submit" class="btn btn-danger"><a href="{{ asset('deletenews/'.$onenews->id) }}">Удалить</a></button>
 </form>
 
 </body>

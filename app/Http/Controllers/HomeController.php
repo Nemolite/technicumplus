@@ -75,6 +75,16 @@ class HomeController extends Controller
         return view('edit',$one_news);
     }
 
+    /*Удаление одной новости*/
+    public function deletenews($id){
+        $article = News::find($id);
+        if ($article) {
+            $article->delete();
+        }
+        return redirect()->route('home');
+
+    }
+
     public function updatenews(Request $request){
         if ( $request->isMethod('post') ) {
             $request->validate([
@@ -105,6 +115,9 @@ class HomeController extends Controller
         return redirect()->route('home');
     }
 
+
+
+    /* Добавление "наши люди"*/
     public function insertpeople(Request $request){
         // валидация заголовка и текста контента
         if ( $request->isMethod('post') ) {
@@ -131,7 +144,7 @@ class HomeController extends Controller
         return redirect()->route('home');
 
     }
-
+    /* Добавление конкурс*/
     public function insertkonkurs(Request $request){
         // валидация заголовка и текста контента
         if ( $request->isMethod('post') ) {

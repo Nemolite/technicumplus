@@ -103,7 +103,7 @@
                     <a href="{{ asset('editnews/'.$one_news->id) }}">Изменить</a>
                 </td>
                 <td>
-                    <a href="">Удалить</a>
+                    <a href="{{ asset('deletenews/'.$one_news->id) }}">Удалить</a>
                 </td>
             </tr>
         @endforeach

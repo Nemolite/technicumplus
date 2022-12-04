@@ -36,3 +36,5 @@ Route::post('/insertpeople', [App\Http\Controllers\HomeController::class, 'inser
 Route::post('/insertkonkurs', [App\Http\Controllers\HomeController::class, 'insertkonkurs'])->name('insertkonkurs');
 Route::get('/editnews/{id}',[\App\Http\Controllers\HomeController::class, 'editnews'])->name('editnews');
 Route::post('/updatenews',[\App\Http\Controllers\HomeController::class, 'updatenews'])->name('updatenews');
+Route::get('/deletenews/{id}',[\App\Http\Controllers\HomeController::class, 'deletenews'])->name('deletenews');
+
