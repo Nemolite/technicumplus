@@ -260,4 +260,8 @@ class HomeController extends Controller
         }
         return redirect()->route('home');
     }
+    /*Админка*/
+    public function admin(){
+        return view('admin');
+    }
 }

@@ -1,0 +1,250 @@
+/* фоон */
+.ob_block_fon_para{
+    background: linear-gradient(103.45deg, #00DFC4 1.9%, #EB00FF 100%);
+    height: 1260px;
+    position: relative;
+    margin-bottom: -14%;
+}
+.fon_block_para{
+    height: 1260px;
+    background-size: cover;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    filter: blur(6px);
+}
+/*стили страницы пары*/
+.ob_block_raspis{
+    width: 55%;
+    height: 750px;
+    float: left;
+}
+.ob_block_fon_raspis{
+    width: 75%;
+    height: 1100px;
+    position: relative;
+    float: right;
+    z-index: 1111;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.block_fon_raspis{
+    background: rgba(171, 145, 255, 0.56);
+    border-radius: 30px 0px 0px 30px;
+    width: 20%;
+    height: 1100px;
+    margin-left: 5%;
+    z-index: 1111;
+    float: left;
+}
+.block_raspis_kurs{
+    width: 10%;
+    padding-top: 2%;
+    padding-left: 1.5%;
+    position: absolute;
+    z-index: 111;
+    float: left;
+}
+.kurs{
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(0deg, #7A51FF, #7A51FF), linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
+    border-radius: 50%;
+    margin-top: 50%;
+    margin-left: 1.7%;
+    z-index: 1111;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.kurs p{
+    color: white;
+    font-family: 'Gabriela';
+    width: 10%;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 23%;
+    padding-top: 23%;
+}
+.block_respis_para{
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+.block_respis_para h1{
+    font-weight: 400;
+    font-family: 'Gilroy';
+    font-size: 30px;
+    padding: 15px;
+    padding-bottom: 10px;
+}
+.ob_raspis_par_ned{
+    background: white;
+    width: 97%;
+    height: 1015px;
+    margin-left: 1.5%;
+    border-radius: 30px;
+}
+.raspis{
+    width: 100%;
+    margin-left: 5%;
+    display: block;
+}
+.nedely{
+    width: 5%;
+    height: 100%;
+    float: left;
+}
+.nedely p {
+    transform: rotate(270deg);
+    color: #3B3B3B;
+    font-family: 'Gabriela';
+    font-size: 30px;
+    font-weight: 400;
+    width: 135px;
+    height: 14%;
+    align-items: center;
+    text-align: left;
+}
+.kurs_den{
+    width: 29%;
+    margin-right: 1.5%;
+    float: left;
+    margin-bottom: 1%;
+}
+.kurs_den h1{
+    font-size: 25px;
+    color: #3b3b3b;
+    padding: 10px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    padding-left: 10%;
+}
+.pred{
+    background: white;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #767676;
+}
+.ob_block_raspis_zvonkov{
+    width: 45%;
+    height: 1100px;
+    float: right;
+}
+.block_respis_zvonki{
+    background: #9875F7;
+    border-radius: 30px;
+    height: 500px;
+    width: 95%;
+    margin: 10px;
+    margin-left: 2.5%;
+    z-index: 1111;
+    position: relative;
+}
+.respis_zvonki_zamen{
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+.respis_zvonki_zamen h1{
+    font-weight: 400;
+    font-family: 'Gilroy';
+    letter-spacing: 5px;
+    font-size: 27px;
+    padding: 15px;
+    padding-bottom: 10px;
+    color: white;
+}
+.block_respis_zamen{
+    background: #3B3B3B;
+    border-radius: 30px;
+    height: 500px;
+    width: 95%;
+    margin-top: 5%;
+    margin-left: 2.5%;
+    z-index: 1111;
+    position: relative;
+}
+.dni{
+    display: flex;
+    text-align-last: center;
+}
+.dni p {
+    color: white;
+    font-family: 'Gilroy';
+    font-size: 25px;
+    font-weight: 500;
+    width: 100%;
+    height: 15%;
+    align-items: center;
+    text-align: left;
+}
+.block_dni{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.para{
+    width: 5%;
+    margin-left: 2%;
+    height: 100%;
+    float: left;
+}
+.para p {
+    color:white;
+    font-family: 'Gabriela';
+    font-size: 30px;
+    font-weight: 400;
+    width: 135px;
+    height: 14%;
+    align-items: center;
+    text-align: left;
+}
+.para_dni{
+    width: 22.5%;
+    height: 360px;
+    float: left;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+.para_dni p {
+    color: white;
+    font-family: 'Gabriela';
+    font-size: 25px;
+    font-weight: 400;
+    width: 135px;
+    height: 46.5px;
+    margin-left: 10%;
+    text-align: left;
+}
+.gr_zamen{
+    float: left;
+    margin-left: 3%;
+}
+.ob_block_zamen{
+    width: 750px;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+.block_zam{
+    border-bottom: 1px solid white;
+    padding-bottom: 2%;
+}
+.block_zam p{
+    font-size: 18px;
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: 'Gilroy';
+}

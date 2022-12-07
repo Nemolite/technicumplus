@@ -27,6 +27,11 @@ Route::get('/konkurs/{id}',[\App\Http\Controllers\MainController::class, 'konkur
 Route::get('/proff',[\App\Http\Controllers\MainController::class, 'proff'])->name('proff');
 /* Маршрут для получения id новости и для дальнейшей обработки и вывода*/
 //Route::get('/newsid/{id}',[\App\Http\Controllers\MainController::class, 'newsid'])->name('newsid');
+Route::get('/para',[\App\Http\Controllers\MainController::class, 'para'])->name('para');
+
+/*Маршрут для тестирования админки*/
+Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->name('admin');
+
 
 /* Маршруты для панеля управления*/
 Auth::routes();

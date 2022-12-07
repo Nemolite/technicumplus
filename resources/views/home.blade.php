@@ -78,7 +78,6 @@
         <button type="submit" class="btn btn-primary">Сохранить</button>
     </form>
 @endsection
-<!-- Вывод новостей, удаление и корректировка-->
 @section('listnews')
     <h1>Вывод новостей, удаление и корректировка</h1>
     <table class="table-primary">
@@ -113,8 +112,6 @@
     </table>
 
 @endsection
-
-<!-- Вывод знаменитых людей, удаление и корректировка-->
 @section('listourpeople')
     <h1>Вывод знаменитых людей, удаление и корректировка</h1>
     <table class="table-primary">

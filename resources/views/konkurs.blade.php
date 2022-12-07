@@ -30,7 +30,7 @@
                 <ul>
                     <li><a href="{{ route('news') }}">Новости</a></li>
                     <li><a href="{{ route('konkurs') }}">Конкурсы</a></li>
-                    <li><a href="#">Пары</a></li>
+                    <li><a href="{{ route('para') }}">Пары</a></li>
                     <li><a href="{{ route('proff') }}">Профессии</a></li>
                 </ul>
             </div>
@@ -46,7 +46,7 @@
                         <div class="acordions">
                             <li><a class="menu" href="{{ route('news') }}">Новости</a></li>
                             <li><a class="menu" href="{{ route('konkurs') }}">Конкурсы</a></li>
-                            <li><a class="menu" href="#">Пары</a></li>
+                            <li><a class="menu" href="{{ route('para') }}">Пары</a></li>
                             <li><a class="menu" href="{{ route('proff') }}">Профессии</a></li>
                             <li><a class="menu" href="{{ route('people') }}">Наши люди</a></li>
                             <li><a class="menu" href="#">Контакты</a></li>

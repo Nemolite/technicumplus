@@ -71,4 +71,9 @@ class MainController extends Controller
 
         return view('proff');
     }
+    public function para() {
+
+        return view('para');
+    }
+
 }
