@@ -173,7 +173,6 @@
 
         <!-- Sidebar -->
         <div class="sidebar">
-
             <!-- SidebarSearch Form -->
             <div class="form-inline">
                 <div class="input-group" data-widget="sidebar-search">
@@ -245,9 +244,111 @@
         <!-- /.content-header -->
 
         <!-- Main content -->
-        <div class="content">
+        <!-- Новости -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-6">
+                        <!-- general form elements -->
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Добавление новостей</h3>
+                            </div>
+                            <!-- /.card-header -->
+                        </div>
+                        111
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (left) -->
 
-        </div>
+                    <!-- right column -->
+                    <div class="col-md-6">
+                        <!-- Form Element sizes -->
+                        <div class="card card-success">
+                            <div class="card-header">
+                                <h3 class="card-title">Корректировка новостей</h3>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        222
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (right) -->
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- Знаменитые люди -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-6">
+                        <!-- general form elements -->
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Добавление знаменитых людей</h3>
+                            </div>
+                            <!-- /.card-header -->
+                        </div>
+                        333
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (left) -->
+
+                    <!-- right column -->
+                    <div class="col-md-6">
+                        <!-- Form Element sizes -->
+                        <div class="card card-success">
+                            <div class="card-header">
+                                <h3 class="card-title">Корректировка знаментитых людей</h3>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        444
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (right) -->
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- Конкурсы -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-6">
+                        <!-- general form elements -->
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Добавление конкурсов</h3>
+                            </div>
+                            <!-- /.card-header -->
+                        </div>
+                        555
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (left) -->
+
+                    <!-- right column -->
+                    <div class="col-md-6">
+                        <!-- Form Element sizes -->
+                        <div class="card card-success">
+                            <div class="card-header">
+                                <h3 class="card-title">Корректировка конкурсов</h3>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        666
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (right) -->
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
