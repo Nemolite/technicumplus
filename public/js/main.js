@@ -24,3 +24,31 @@ for (var i = 0; i < card_body_btn.length; i++) {
     })
 }
 */
+
+let anews = document.querySelector('#anews');
+let aour = document.querySelector('#aour');
+let akon = document.querySelector('#akon');
+
+let cnews = document.querySelector('#cnews');
+let cour = document.querySelector('#cour');
+let ckon = document.querySelector('#ckon');
+
+anews.addEventListener('click',function (){
+    cnews.style.display = 'block';
+    cour.style.display = 'none';
+    ckon.style.display = 'none';
+})
+
+aour.addEventListener('click',function (){
+    cour.style.display = 'block';
+    cnews.style.display = 'none';
+    ckon.style.display = 'none';
+})
+
+akon.addEventListener('click',function (){
+    ckon.style.display = 'block';
+    cnews.style.display = 'none';
+    cour.style.display = 'none';
+})
+
+
