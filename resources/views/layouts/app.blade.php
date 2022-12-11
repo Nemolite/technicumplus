@@ -94,8 +94,12 @@
         </nav>
 
         <main class="py-4">
-            @yield('wrapper')
+            @yield('content')
         </main>
+
+        <div class="container">
+
+        </div>
     </div><!-- #app-->
     <!-- REQUIRED SCRIPTS -->
 

@@ -8,7 +8,7 @@
                 <div class="card" style="border-radius: 1rem;">
                     <div class="row g-0">
                         <div class="col-md-6 col-lg-5 d-none d-md-block">
-                            <img src="https://s3-alpha-sig.figma.com/img/47f6/6860/3cf06de02fddb741ac0a1bf8c2420ccc?Expires=1670198400&Signature=PzX~ymtAXHqjHWlBi5wve3ktpdontKrXzwh8hWI5RqvtUrJg21hy0PbhUFu8LCBiQA6RP32hBaaXwPYahtjaNHWJd-hhQoSHJW4jFMV40RRn-r6hMSYvMlxgvgolabH-c0grD2KEd5LIteosdT4UtVEYvOtqtIUMhZLizvQDXNxjBF7Gx5ZnhiepvIJS1cSW8S2e6-Pgxhvqh4oUCrTiNW~sf~qYnde65sxyVpvmBYipwmGynS8nqaH-nOjFBs~K1sHDlG81Q22UdKm-6Pm4-V5RgzMz1VIrg3fSpBfpoFAa~OeocURNelxbYGWwSOY~RLEJDLXl~k7SmSr9yJurzQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                            <img src="public/image/reg.jpg"
                                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
                         </div>
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
