@@ -1,4 +1,4 @@
-.ob_block_fon_vxod{
+﻿.ob_block_fon_vxod{
     background: linear-gradient(103.45deg, #00DFC4 1.9%, #EB00FF 100%);
     height:1100px;
     bottom:0;
@@ -23,9 +23,9 @@
 
 
 .img-fluid {
-    max-width: 110%;
-    height: 958px;
-    z-index: 100;
+    /* max-width: 131%; */
+    height: 100px
+    height: 861px;
 }
 .vh-100 {
     height: 66vh!important;

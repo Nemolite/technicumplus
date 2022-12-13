@@ -7,7 +7,7 @@
     <!-- бутстрап -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- подключение стилей -->
-    <link rel="stylesheet" href="{{ asset("public/css/style.css") }}">
+    <link rel="stylesheet" href="{{ asset("public/css/news.css") }}">
     <!-- подключение шрифта -->
     <link rel="stylesheet" href="{{ asset("public/css/fonts.css") }}">
     <!-- подключение стилей для меню-->
@@ -57,30 +57,25 @@
             </div>
         </div>
     </div>
-<div class="block">
-    <div class="row">
-        @foreach ($konkurs as $one_konkurs)
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="{{ asset('konkurs/'.$one_konkurs->id) }}">
-                            <img src="{{ asset('public/storage/folder/'.$one_konkurs->url) }}" alt="{{ $one_konkurs->title }}">
-                        </a>
-                    </div>
+    <div class="ob_news_block">
+        <div class="news_block">
+            @foreach ($konkurs as $one_konkurs)
+            <a class="col-sm-6" href="{{ asset('konkurs/'.$one_konkurs->id) }}">
+                <div class="card" style="background: url('{{ asset('public/storage/folder/'.$one_konkurs->url) }}') no-repeat center;background-size: cover" alt="{{ $one_konkurs->title }}">
+                    <div class="card-body card-body-btn"  data-id="{{ $one_konkurs->id }}"></div>
                 </div>
-            </div>
-        @endforeach
-
+            </a>
+            @endforeach
+        </div>
     </div>
-
-
 </div>
-</div>
-<div class="zagolovk">
+<div class="zagolovk_news">
     <div class="fon">
         <div class="col-lg-4">
-            <div class="krug_konkurs">
-                <img src="{{ asset('public/storage/folder/'.$firstkonkurs->url) }}" alt="{{ $firstkonkurs->title }}">
+            <div class="krug_news">
+                <a class="col-sm-6" href="{{ asset('konkurs/'.$firstkonkurs->id) }}">
+                    <div class="card" style="background: url('{{ asset('public/storage/folder/'.$firstkonkurs->url) }}') no-repeat center;background-size: cover" alt="{{ $firstkonkurs->title }}"></div>
+                </a>
             </div>
             <h2  class="zagolovk_konkurs">{{ $firstkonkurs->title }}</h2>
             <p class="information_konkurs">{{ $firstkonkurs->content }}</p>

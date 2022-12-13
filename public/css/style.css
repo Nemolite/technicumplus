@@ -23,23 +23,6 @@ body {
     top:0;
     filter: blur(6px);
 }
-.ob_block_fon{
-    background: linear-gradient(103.45deg, #00DFC4 1.9%, #EB00FF 100%);
-    height: 940px;
-    position: relative;
-    margin-bottom: -14%;
-}
-.fon_block{
-    height: 940px;
-    background-size: cover;
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    filter: blur(6px);
-}
 .ob_block_fon_proff{
     background: linear-gradient(103.45deg, #00DFC4 1.9%, #EB00FF 100%);
     height: 1340px;
@@ -854,18 +837,21 @@ i{
     padding-top: 20px;
 }
 .our_people_title {
-    font-size: 18px;
+    font-size: 25px;
+    font-family: 'Gilroy';
     line-height: 1.2;
 }
 .our_people_content {
-    font-size: 14px;
+    font-family: 'Gilroy';
+    font-size: 15px;
     line-height: 1.5;
+    padding: 10px 15px 10px 15px;
 }
 .our_people_img {
     margin-bottom: 20px;
     clip-path: circle(50%);
-    height: 5em;
-    width: 5em;
+    height: 6em;
+    width: 6em;
 }
 /*дополнение к стилям конкурсы*/
 

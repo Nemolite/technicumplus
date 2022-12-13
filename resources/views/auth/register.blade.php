@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <section class="vh-100" >
@@ -9,7 +9,8 @@
                     <div class="row g-0">
                         <div class="col-md-6 col-lg-5 d-none d-md-block">
                             <img src="public/image/reg.jpg"
-                                 alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                                 alt="login form" class="img-fluid" style="max-width: 110%;
+    height: 999px; border-radius: 1rem 0 0 1rem;"  />
                         </div>
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                             <div class="card-body p-4 p-lg-5 text-black">
@@ -64,7 +65,7 @@
 
 
                                     <div class="pt-1 mb-4">
-                                        <button class="btn btn-dark btn-lg btn-block" type="button">Зарегестрироваться</button>
+                                        <button class="btn btn-dark btn-lg btn-block" type="submit">Зарегестрироваться</button>
                                     </div>
                                 </form>
 

@@ -54,14 +54,16 @@
     margin-right: 100px;
 }
 .col-sm-6{
-     width: 30%;
-     margin-right: 4%;
+    width: 49%;
+    margin-left: 0%;
     display: inline-block;
 }
 .ob_news_block{
     position: absolute;
     z-index: 111;
     float: left;
+    width: 65%;
+    margin-left: 3%;
 }
 .news_block{
     padding-left: 650px;

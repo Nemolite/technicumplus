@@ -9,7 +9,7 @@
     <!-- бутстрап -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- подключение стилей -->
- <link rel="stylesheet" href="{{ asset("public/css/style.css") }}">
+    <link rel="stylesheet" href="{{ asset("public/css/style.css") }}">
     <!-- подключение дополнительных стилей -->
     <link rel="stylesheet" href="{{ asset("public/css/people.css") }}">
     <!-- подключение стилей для меню-->
@@ -26,11 +26,8 @@
     </script>
 </head>
 
-<body translate="no">
-
+<body style="background: url('{{ asset("/image/Fon.png") }}') no-repeat center;background-position: top;height: 940px;">
 <div class="ob_block_fon">
-    <!-- блок верхний с изображением и наклоном внизу -->
-    <div class="fon_block" style="background: url('{{ asset("image/2.png") }}') no-repeat center;"></div>
     <div class="glav_conteiner">
         <!-- навигационное меню и логотип -->
         <div class="object_menu">

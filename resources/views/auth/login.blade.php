@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <section class="vh-100" >
@@ -8,8 +8,9 @@
                 <div class="card" style="border-radius: 1rem;">
                     <div class="row g-0">
                         <div class="col-md-6 col-lg-5 d-none d-md-block">
-                            <img src="https://s3-alpha-sig.figma.com/img/69ec/adba/3857e474325f75843f8b9dd8af8840b3?Expires=1670803200&Signature=XVJ8XMerlduHvlw2yADgCChK-pc461O5fa2pfDzDQDZdOx47xOgFZJoLR~vqrP2Sa8svD6ytrRsAMKYSta59cd~eWOWb6zRvlQ2WmmJxTpK3KskjqK8PZmTUIXaNaDtWp85-zxGymrumLPkl-vj3LV4oC--V130lhOTDBMgKrAwIkwhehafZ5EIVtq62Qth5ZEqyA9uJLInc2fbS9aIOFW0PYcG5gk7n9~YZ1NeOPQTqQBkuRivue49VyyiYPFzwynnO2J63KoRx0JRDTCyoPEIOGK8JR42lVOdqCfAx9KWNfqFCH2EY8ZN1oQJfwOnnYMt0UkQdYLidZEP2HXQKVQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                                 alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                            <img src="{{ asset("/image/login.jpg") }}"
+                                 alt="login form" class="img-fluid" style="max-width: 110%;
+    height: 958px; border-radius: 1rem 0 0 1rem;"  />
                         </div>
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                             <div class="card-body p-4 p-lg-5 text-black">
@@ -56,7 +57,9 @@
                                     </div>
 
                                     <div class="pt-1 mb-4">
-                                        <button class="btn btn-dark btn-lg btn-block" type="button">Войти</button>
+                                        <button class="btn btn-dark btn-lg btn-block" type="submit">
+										 {{ __('Login') }}
+										</button>
                                         @if (Route::has('password.request'))
                                             <a class="btn btn-link" href="{{ route('password.request') }}">
                                                 {{ __('Забыл пароль?') }}
