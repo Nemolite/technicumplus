@@ -29,10 +29,6 @@ Route::get('/proff',[\App\Http\Controllers\MainController::class, 'proff'])->nam
 //Route::get('/newsid/{id}',[\App\Http\Controllers\MainController::class, 'newsid'])->name('newsid');
 Route::get('/para',[\App\Http\Controllers\MainController::class, 'para'])->name('para');
 
-/*Маршрут для тестирования админки*/
-Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->name('admin');
-
-
 /* Маршруты для панеля управления*/
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -52,6 +48,9 @@ Route::post('/insertkonkurs', [App\Http\Controllers\HomeController::class, 'inse
 Route::get('/editkonkurs/{id}',[\App\Http\Controllers\HomeController::class, 'editkonkurs'])->name('editkonkurs');
 Route::get('/deletekonkurs/{id}',[\App\Http\Controllers\HomeController::class, 'deletekonkurs'])->name('deletekonkurs');
 Route::post('/updatekonkurs',[\App\Http\Controllers\HomeController::class, 'updatekonkurs'])->name('updatekonkurs');
+
+/* Расписание */
+Route::post('/timetable',[\App\Http\Controllers\HomeController::class, 'timetable'])->name('timetable');
 
 
 

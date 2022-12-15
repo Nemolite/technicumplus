@@ -25,7 +25,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="{{ route('admin') }}" class="brand-link">
+        <a href="{{ route('home') }}" class="brand-link">
             <img src="public/image/i.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">Technicumplus</span>
         </a>
@@ -72,6 +72,39 @@
                             <i class="nav-icon fas fa-edit"></i>
                             <p id="akon">
                                 Конкурсы
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-header">Расписание</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p id="kurs1">
+                                1 курс
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p id="kurs2">
+                                2 курс
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p id="kurs3">
+                                3 курс
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p id="kurs4">
+                                4 курс
                             </p>
                         </a>
                     </li>
@@ -343,6 +376,334 @@
                 <!-- /.row -->
             </div><!-- /.container-fluid -->
         </section>
+        <!-- *********************************************************************** -->
+        <!-- *********************************************************************** -->
+        <!-- Расписание -->
+        <section class="content timetable empty-top" id="ckurs1">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-12">
+                        <!-- general form elements -->
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Заполнение расписание для 1 курса</h3>
+                            </div>
+                            <!-- /.card-header -->
+                        </div>
+                        <form action="{{ route('timetable') }}" method="post" enctype="multipart/form-data" id="formckurs1" name="formckurs1">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <h3>Понедельник</h3>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred11" id="pred11" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred12" id="pred12" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred13" id="pred13" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred14" id="pred14" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred15" id="pred15" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred16" id="pred16" value="">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Вторник</h4>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred21" id="pred21" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred22" id="pred22" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred23" id="pred23" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred24" id="pred24" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred25" id="pred25" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred26" id="pred26" value="">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Среда</h4>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred31" id="pred31" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred32" id="pred32" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred33" id="pred33" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred34" id="pred34" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred35" id="pred35" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred36" id="pred36" value="">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Четверг</h4>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred41" id="pred41" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred42" id="pred42" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred43" id="pred43" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred44" id="pred44" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred45" id="pred45" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred46" id="pred46" value="">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Пятница</h4>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred51" id="pred51" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred52" id="pred52" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred53" id="pred53" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred54" id="pred54" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred55" id="pred55" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred56" id="pred56" value="">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Суббота</h4>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred61" id="pred61" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred62" id="pred62" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred63" id="pred63" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred64" id="pred64" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred65" id="pred65" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred66" id="pred66" value="">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Сохранить</button>
+                        </form>
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (left) -->
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- *********************************************************************** -->
+        <!-- *********************************************************************** -->
+        <!-- Завершение блока расписание -->
+
+
+
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->

@@ -13,11 +13,11 @@
     @csrf
     <div class="mb-3">
         <label for="titlek" class="form-label">Заголовок конкурса</label>
-        <input type="text" class="form-control" id="titlek" name="titlek" placeholder="{{ $onekonkurs->title }}" value="{{ $onekonkurs->title }}">
+        <input type="text" class="form-control" id="titlek" name="titlek" value="{{ $onekonkurs->title }}">
     </div>
     <div class="mb-3">
         <label for="txtk" class="form-label">Текст конкурса</label>
-        <textarea class="form-control" id="txtk" name="txtk" rows="3" placeholder="{{ $onekonkurs->content }}" value="{{ $onekonkurs->content }}"></textarea>
+        <textarea class="form-control" id="txtk" name="txtk" rows="3" value="{{ $onekonkurs->content }}"></textarea>
     </div>
     <div class="mb-3">
         <img src="{{ asset('public/storage/folder/'.$onekonkurs->url) }}" alt="{{ $onekonkurs->title }}">

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Konkurs;
 use App\Models\News;
 use App\Models\Ourpeople;
+use App\Models\Timetable;
+use App\Services\DBtimetable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -30,10 +32,12 @@ class HomeController extends Controller
         $news = News::all();
         $ourpeople = Ourpeople::all();
         $konkurs = Konkurs::all();
+
         $list_all = [
             'news'=>$news,
             'ourpeople'=>$ourpeople,
             'konkurs'=>$konkurs
+
         ];
         return view('home',$list_all);
     }
@@ -260,8 +264,12 @@ class HomeController extends Controller
         }
         return redirect()->route('home');
     }
-    /*Админка*/
-    public function admin(){
-        return view('admin');
-    }
+    /* Расписание */
+  public function timetable(Request $request){
+
+      $inner = new DBtimetable();
+      $inner->inner($request);
+
+      return redirect()->route('home');
+  }
 }

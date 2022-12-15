@@ -333,3 +333,15 @@ strong{
     margin-left: 3%;
 }
 
+/*Стили админки*/
+.empty-top {
+    margin-top: 20px;
+}
+
+.timetable .table td, .timetable .table th {
+    padding: 0;
+}
+
+.timetable .table>:not(caption)>*>* {
+    padding: 0;
+}

@@ -13,11 +13,11 @@
     @csrf
     <div class="mb-3">
         <label for="titleop" class="form-label">Заголовок знаменитые люди</label>
-        <input type="text" class="form-control" id="titleop" name="titleop" placeholder="{{ $oneourpeople->title }}" value="{{ $oneourpeople->title }}">
+        <input type="text" class="form-control" id="titleop" name="titleop"  value="{{ $oneourpeople->title }}">
     </div>
     <div class="mb-3">
         <label for="txtop" class="form-label">Текст знаменитые люди</label>
-        <textarea class="form-control" id="txtop" name="txtop" rows="3" placeholder="{{ $oneourpeople->content }}" value="{{ $oneourpeople->content }}"></textarea>
+        <textarea class="form-control" id="txtop" name="txtop" rows="3"  value="{{ $oneourpeople->content }}"></textarea>
     </div>
     <div class="mb-3">
         <img src="{{ asset('public/storage/folder/'.$oneourpeople->url) }}" alt="{{ $oneourpeople->title }}">

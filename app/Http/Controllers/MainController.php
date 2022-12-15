@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Konkurs;
 use App\Models\News;
 use App\Models\Ourpeople;
+use App\Services\DBtimetable;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -73,7 +74,13 @@ class MainController extends Controller
     }
     public function para() {
 
-        return view('para');
+        /*Расписание*/
+        $dbtimetable = new DBtimetable();
+        $timetable = $dbtimetable->builder();
+        $list_all = [
+            'timetable'=>$timetable
+        ];
+        return view('para',$list_all);
     }
 
 }

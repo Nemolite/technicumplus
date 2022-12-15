@@ -58,6 +58,7 @@
             </div>
         </div>
     </div><!-- конец меню -->
+
     <div class="ob_block_raspis">
         <div class="block_fon_raspis">
             {{--начало блока курсов--}}
