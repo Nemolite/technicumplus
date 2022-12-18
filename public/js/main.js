@@ -50,16 +50,3 @@ akon.addEventListener('click',function (){
     cnews.style.display = 'none';
     cour.style.display = 'none';
 })
-
-/* Расписание  - Курсы*/
-let kurs1= document.querySelector('#kurs1')
-let allcontent = document.querySelectorAll('.content')
-for(content of allcontent){
-    console.log(content)
-}
-kues1.addEventListener('click', function () {
-
-    //ckurs1
-})
-
-

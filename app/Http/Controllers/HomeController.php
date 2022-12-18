@@ -59,11 +59,7 @@ class HomeController extends Controller
             $upload_folder = 'public/folder';
             $filename = $file->getClientOriginalName();
             Storage::putFileAs($upload_folder, $file, $filename);
-            //$url = Storage::url($filename);
-            //dd($path);
 
-            //должно быть  public/storage/folder/-QIhHi0DwGg.jpg
-            //$path  "public/folder/-QIhHi0DwGg.jpg"
         }
         /*Создание новой записи */
         //News::create($request->all());
@@ -109,11 +105,6 @@ class HomeController extends Controller
             $upload_folder = 'public/folder';
             $filename = $file->getClientOriginalName();
             Storage::putFileAs($upload_folder, $file, $filename);
-            //$url = Storage::url($filename);
-            //dd($path);
-
-            //должно быть  public/storage/folder/-QIhHi0DwGg.jpg
-            //$path  "public/folder/-QIhHi0DwGg.jpg"
         }
         $id = $request->formnewsid;
         $news = News::find($id);

@@ -75,39 +75,6 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-header">Расписание</li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p id="kurs1">
-                                1 курс
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p id="kurs2">
-                                2 курс
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p id="kurs3">
-                                3 курс
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p id="kurs4">
-                                4 курс
-                            </p>
-                        </a>
-                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
@@ -387,12 +354,13 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Заполнение расписание для 1 курса</h3>
+                                <h3 class="card-title">Заполнение расписание</h3>
                             </div>
                             <!-- /.card-header -->
                         </div>
                         <form action="{{ route('timetable') }}" method="post" enctype="multipart/form-data" id="formckurs1" name="formckurs1">
                             @csrf
+
                             <div class="row">
                                 <div class="col-md-2">
                                     <h3>Понедельник</h3>
@@ -688,6 +656,34 @@
                                         </tbody>
                                     </table>
                                 </div>
+                            </div>
+
+                            <p>Выберите курс:</p>
+                            <div>
+                                <input type="radio" id="curs1"
+                                       name="formcurs" value="1">
+                                <label for="curs1">1 курс</label>
+
+                                <input type="radio" id="curs2"
+                                       name="formcurs" value="2">
+                                <label for="curs2">2 курс</label>
+
+                                <input type="radio" id="curs3"
+                                       name="formcurs" value="3">
+                                <label for="curs3">3 курс</label>
+
+                                <input type="radio" id="curs4"
+                                       name="formcurs" value="4">
+                                <label for="curs4">4 курс</label>
+                            </div>
+                            <p>Выберите группу:</p>
+                            <div class="col-md-2">
+                                <select class="form-select" name="formgr" id="formgr">
+                                    <option value="0" selected>Группа не выбрана</option>
+                                    <option value="1">1ИП</option>
+                                    <option value="2">1БУ</option>
+                                    <option value="3">1ТО</option>
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary">Сохранить</button>
                         </form>
