@@ -9,6 +9,7 @@
     <!-- подключение стилей -->
     <link rel="stylesheet" href="{{ asset("public/css/para.css") }}">
     <link rel="stylesheet" href="{{ asset("public/css/menu.css") }}">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- подключение шрифта -->
     <link rel="stylesheet" href="{{ asset("public/css/fonts.css") }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -83,7 +84,7 @@
                     </div>
                     <div class="raspis_par_ned">
                         <div class="groop_">
-                            <div class="kurs_den" id="1ИП">
+                            <div class="kurs_den" data-slick-index="0" aria-hidden="false" id="1ip">
                                 <h1>1ИП</h1>
                                 <div class="raspis" value="пн">
                                     <div class="pred"></div>
@@ -93,10 +94,141 @@
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                 </div>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
                             </div>
-                            <div class="kurs_den" id="2ИП">
+                            <div class="kurs_den" data-slick-index="1" aria-hidden="false" id="1ip">
+                                <h1>1ИП</h1>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis" value="пн">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                            </div>
+                            <div class="kurs_den" data-slick-index="2" aria-hidden="false" id="2ip">
                                 <h1>2ИП</h1>
-                                <div class="raspis" value="пн">
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                     <div class="pred"></div>
@@ -105,9 +237,49 @@
                                     <div class="pred"></div>
                                 </div>
                             </div>
-                            <div class="kurs_den" id="3ИП">
+                            <div class="kurs_den" data-slick-index="3" aria-hidden="true" id="3ip">
                                 <h1>3ИП</h1>
-                                <div class="raspis" value="пн">
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                     <div class="pred"></div>
@@ -116,9 +288,49 @@
                                     <div class="pred"></div>
                                 </div>
                             </div>
-
-                            <div class="kurs_den" id="1ИП">
-                                <div class="raspis" value="вт">
+                            <div class="kurs_den" data-slick-index="4" aria-hidden="true" id="3ip">
+                                <h1>3ИП</h1>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                     <div class="pred"></div>
@@ -127,8 +339,49 @@
                                     <div class="pred"></div>
                                 </div>
                             </div>
-                            <div class="kurs_den" id="2ИП">
-                                <div class="raspis" value="вт">
+                            <div class="kurs_den" data-slick-index="5" aria-hidden="true" id="3ip">
+                                <h1>3ИП</h1>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                    <div class="pred"></div>
+                                </div>
+                                <div class="raspis">
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                     <div class="pred"></div>
@@ -137,8 +390,9 @@
                                     <div class="pred"></div>
                                 </div>
                             </div>
-                            <div class="kurs_den" id="3ИП">
-                                <div class="raspis" value="вт">
+                            <div class="kurs_den" data-slick-index="6" aria-hidden="true" id="3ip">
+                                <h1>3ИП</h1>
+                                <div class="raspis">
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                     <div class="pred"></div>
@@ -146,10 +400,7 @@
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                 </div>
-                            </div>
-
-                            <div class="kurs_den" id="1ИП">
-                                <div class="raspis" value="ср">
+                                <div class="raspis">
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                     <div class="pred"></div>
@@ -157,9 +408,7 @@
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                 </div>
-                            </div>
-                            <div class="kurs_den" id="2ИП">
-                                <div class="raspis" value="ср">
+                                <div class="raspis">
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                     <div class="pred"></div>
@@ -167,9 +416,7 @@
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                 </div>
-                            </div>
-                            <div class="kurs_den" id="3ИП">
-                                <div class="raspis" value="ср">
+                                <div class="raspis">
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                     <div class="pred"></div>
@@ -177,10 +424,7 @@
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                 </div>
-                            </div>
-
-                            <div class="kurs_den" id="1ИП">
-                                <div class="raspis" value="чт">
+                                <div class="raspis">
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                     <div class="pred"></div>
@@ -188,81 +432,7 @@
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                 </div>
-                            </div>
-                            <div class="kurs_den" id="2ИП">
-                                <div class="raspis" value="чт">
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                </div>
-                            </div>
-                            <div class="kurs_den" id="3ИП">
-                                <div class="raspis" value="чт">
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                </div>
-                            </div>
-
-                            <div class="kurs_den" id="1ИП">
-                                <div class="raspis" value="пт">
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                </div>
-                            </div>
-                            <div class="kurs_den" id="2ИП">
-                                <div class="raspis" value="пт">
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                </div>
-                            </div>
-                            <div class="kurs_den" id="3ИП">
-                                <div class="raspis" value="пт">
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                </div>
-                            </div>
-
-                            <div class="kurs_den" id="1ИП">
-                                <div class="raspis" value="сб">
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                </div>
-                            </div>
-                            <div class="kurs_den" id="2ИП">
-                                <div class="raspis" value="сб">
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                    <div class="pred"></div>
-                                </div>
-                            </div>
-                            <div class="kurs_den" id="3ИП">
-                                <div class="raspis" value="сб">
+                                <div class="raspis">
                                     <div class="pred"></div>
                                     <div class="pred"></div>
                                     <div class="pred"></div>
@@ -378,5 +548,9 @@
 
 <!-- бутстрап -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/slickslider.js"></script>
 </body>
 </html>

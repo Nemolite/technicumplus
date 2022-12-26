@@ -96,6 +96,7 @@
 .raspis{
     width: 100%;
     margin-left: 5%;
+    margin-bottom: 5%;
     display: block;
 }
 .nedely{
@@ -146,7 +147,7 @@
     width: 95%;
     margin: 10px;
     margin-left: 2.5%;
-    z-index: 1111;
+    z-index: 30;
     position: relative;
 }
 .respis_zvonki_zamen{

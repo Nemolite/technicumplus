@@ -27,16 +27,28 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
+        $input = $request->all();
+
+        if($input){
+            $formcurs = $input['curs'];
+            $formgr = $input['gr'];
+        } else {
+            $formcurs = 1; // 1 курс
+            $formgr = 1;     // 1ИП
+        }
         $news = News::all();
         $ourpeople = Ourpeople::all();
         $konkurs = Konkurs::all();
 
+        $inner = new DBtimetable();
+
         $list_all = [
             'news'=>$news,
             'ourpeople'=>$ourpeople,
-            'konkurs'=>$konkurs
+            'konkurs'=>$konkurs,
+            'val'=>$inner->builder($formcurs,$formgr),
 
         ];
         return view('home',$list_all);
@@ -257,10 +269,19 @@ class HomeController extends Controller
     }
     /* Расписание */
   public function timetable(Request $request){
-
+      $input = $request->all();
       $inner = new DBtimetable();
-      $inner->inner($request);
 
-      return redirect()->route('home');
+      if (isset($input['save'])) {
+          $inner->inner($request);
+          return redirect()->route('home');
+      }elseif (isset($input['load'])){
+          $rasp =[
+              'val'=>$inner->builder($input['formcurs'],$input['formgr']),
+              'curs'=>$input['formcurs'],
+              'gr' =>$input['formgr']
+          ];
+          return redirect()->route('home',$rasp);
+      }
   }
 }

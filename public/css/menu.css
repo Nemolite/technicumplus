@@ -60,6 +60,12 @@ strong{
     margin-top: 10px;
     z-index: 200;
 }
+.acordions{
+    background: #b136f0;
+    height: 310px;
+    width: 185px;
+    border-radius: 15px;
+}
 .accordion-button {
     position: relative;
     display: flex;

@@ -117,7 +117,7 @@
                                 <h3 class="card-title">Добавление новостей</h3>
                             </div>
                             <!-- /.card-header -->
-                        </div>
+
                         <form action="{{ route('insertnews') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
@@ -134,6 +134,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Сохранить</button>
                         </form>
+                        </div>
                         <!-- /.card -->
                     </div>
                     <!--/.col (left) -->
@@ -146,7 +147,7 @@
                                 <h3 class="card-title">Корректировка новостей</h3>
                             </div>
                             <!-- /.card-body -->
-                        </div>
+
                         <table class="table-primary">
                             <thead>
                             <tr>
@@ -177,6 +178,7 @@
 
                             </tbody>
                         </table>
+                        </div>
                         <!-- /.card -->
                     </div>
                     <!--/.col (right) -->
@@ -196,7 +198,7 @@
                                 <h3 class="card-title">Добавление знаменитых людей</h3>
                             </div>
                             <!-- /.card-header -->
-                        </div>
+
                         <form action="{{ route('insertpeople') }}" method="post" enctype="multipart/form-data" id="forminsertpeople" name="forminsertpeople">
                             @csrf
                             <div class="mb-3">
@@ -213,6 +215,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Сохранить</button>
                         </form>
+                        </div>
                         <!-- /.card -->
                     </div>
                     <!--/.col (left) -->
@@ -225,7 +228,7 @@
                                 <h3 class="card-title">Корректировка знаментитых людей</h3>
                             </div>
                             <!-- /.card-body -->
-                        </div>
+
 
                         <table class="table-primary">
                             <thead>
@@ -257,6 +260,7 @@
 
                             </tbody>
                         </table>
+                        </div>
                         <!-- /.card -->
                     </div>
                     <!--/.col (right) -->
@@ -276,7 +280,7 @@
                                 <h3 class="card-title">Добавление конкурсов</h3>
                             </div>
                             <!-- /.card-header -->
-                        </div>
+
                         <form action="{{ route('insertkonkurs') }}" method="post" enctype="multipart/form-data" id="forminsertkonkurs" name="forminsertkonkurs">
                             @csrf
                             <div class="mb-3">
@@ -293,6 +297,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Сохранить</button>
                         </form>
+                        </div>
                         <!-- /.card -->
                     </div>
                     <!--/.col (left) -->
@@ -305,7 +310,7 @@
                                 <h3 class="card-title">Корректировка конкурсов</h3>
                             </div>
                             <!-- /.card-body -->
-                        </div>
+
                         <table class="table-primary">
                             <thead>
                             <tr>
@@ -336,6 +341,7 @@
 
                             </tbody>
                         </table>
+                        </div>
                         <!-- /.card -->
                     </div>
                     <!--/.col (right) -->
@@ -346,6 +352,7 @@
         <!-- *********************************************************************** -->
         <!-- *********************************************************************** -->
         <!-- Расписание -->
+
         <section class="content timetable empty-top" id="ckurs1">
             <div class="container-fluid">
                 <div class="row">
@@ -357,307 +364,46 @@
                                 <h3 class="card-title">Заполнение расписание</h3>
                             </div>
                             <!-- /.card-header -->
-                        </div>
+
+                            <form action="{{ route('timetable') }}" method="post" enctype="multipart/form-data" id="formckurs1" name="formckurs1">
+                                @csrf
+
+                                <p>Для загрузки ввода данных и их корректировки необходимо выбрать курс и выбрать группу</p>
+                                <p>Выберите курс:</p>
+                                <div>
+                                    <input type="radio" id="curs1"
+                                           name="formcurs" value="1">
+                                    <label for="curs1">1 курс</label>
+
+                                    <input type="radio" id="curs2"
+                                           name="formcurs" value="2">
+                                    <label for="curs2">2 курс</label>
+
+                                    <input type="radio" id="curs3"
+                                           name="formcurs" value="3">
+                                    <label for="curs3">3 курс</label>
+
+                                    <input type="radio" id="curs4"
+                                           name="formcurs" value="4">
+                                    <label for="curs4">4 курс</label>
+                                </div>
+                                <p>Выберите группу:</p>
+                                <div class="col-md-2">
+                                    <select class="form-select" name="formgr" id="formgr">
+                                        <option value="0" selected>Группа не выбрана</option>
+                                        <option value="1">1ИП</option>
+                                        <option value="2">1БУ</option>
+                                        <option value="3">1ТО</option>
+                                    </select>
+                                </div>
+                                <input type="hidden" name="load" value="on">
+                                <button type="submit"class="btn btn-success">Загрузить</button>
+                            </form>
+
                         <form action="{{ route('timetable') }}" method="post" enctype="multipart/form-data" id="formckurs1" name="formckurs1">
                             @csrf
 
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <h3>Понедельник</h3>
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Пары</th>
-                                            <th scope="col">Предметы</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>
-                                                <input type="text" name="pred11" id="pred11" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>
-                                                <input type="text" name="pred12" id="pred12" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>
-                                                <input type="text" name="pred13" id="pred13" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>
-                                                <input type="text" name="pred14" id="pred14" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>
-                                                <input type="text" name="pred15" id="pred15" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>
-                                                <input type="text" name="pred16" id="pred16" value="">
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-2">
-                                    <h4>Вторник</h4>
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Пары</th>
-                                            <th scope="col">Предметы</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>
-                                                <input type="text" name="pred21" id="pred21" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>
-                                                <input type="text" name="pred22" id="pred22" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>
-                                                <input type="text" name="pred23" id="pred23" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>
-                                                <input type="text" name="pred24" id="pred24" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>
-                                                <input type="text" name="pred25" id="pred25" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>
-                                                <input type="text" name="pred26" id="pred26" value="">
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-2">
-                                    <h4>Среда</h4>
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Пары</th>
-                                            <th scope="col">Предметы</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>
-                                                <input type="text" name="pred31" id="pred31" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>
-                                                <input type="text" name="pred32" id="pred32" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>
-                                                <input type="text" name="pred33" id="pred33" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>
-                                                <input type="text" name="pred34" id="pred34" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>
-                                                <input type="text" name="pred35" id="pred35" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>
-                                                <input type="text" name="pred36" id="pred36" value="">
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-2">
-                                    <h4>Четверг</h4>
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Пары</th>
-                                            <th scope="col">Предметы</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>
-                                                <input type="text" name="pred41" id="pred41" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>
-                                                <input type="text" name="pred42" id="pred42" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>
-                                                <input type="text" name="pred43" id="pred43" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>
-                                                <input type="text" name="pred44" id="pred44" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>
-                                                <input type="text" name="pred45" id="pred45" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>
-                                                <input type="text" name="pred46" id="pred46" value="">
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-2">
-                                    <h4>Пятница</h4>
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Пары</th>
-                                            <th scope="col">Предметы</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>
-                                                <input type="text" name="pred51" id="pred51" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>
-                                                <input type="text" name="pred52" id="pred52" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>
-                                                <input type="text" name="pred53" id="pred53" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>
-                                                <input type="text" name="pred54" id="pred54" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>
-                                                <input type="text" name="pred55" id="pred55" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>
-                                                <input type="text" name="pred56" id="pred56" value="">
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-2">
-                                    <h4>Суббота</h4>
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Пары</th>
-                                            <th scope="col">Предметы</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>
-                                                <input type="text" name="pred61" id="pred61" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>
-                                                <input type="text" name="pred62" id="pred62" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>
-                                                <input type="text" name="pred63" id="pred63" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>
-                                                <input type="text" name="pred64" id="pred64" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>
-                                                <input type="text" name="pred65" id="pred65" value="">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>
-                                                <input type="text" name="pred66" id="pred66" value="">
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
+                            <p>Для сохранения данных необходимо выбрать курс и выбрать группу</p>
                             <p>Выберите курс:</p>
                             <div>
                                 <input type="radio" id="curs1"
@@ -685,8 +431,309 @@
                                     <option value="3">1ТО</option>
                                 </select>
                             </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <h3>Понедельник</h3>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred11" id="pred11" value="{{ $val['pred11'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred12" id="pred12" value="{{ $val['pred12'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred13" id="pred13" value="{{ $val['pred13'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred14" id="pred14" value="{{ $val['pred14'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred15" id="pred15" value="{{ $val['pred15'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred16" id="pred16" value="{{ $val['pred16'] }}">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Вторник</h4>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred21" id="pred21" value="{{ $val['pred21'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred22" id="pred22" value="{{ $val['pred21'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred23" id="pred23" value="{{ $val['pred23'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred24" id="pred24" value="{{ $val['pred24'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred25" id="pred25" value="{{ $val['pred25'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred26" id="pred26" value="{{ $val['pred26'] }}">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Среда</h4>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred31" id="pred31" value="{{ $val['pred31'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred32" id="pred32" value="{{ $val['pred32'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred33" id="pred33" value="{{ $val['pred33'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred34" id="pred34" value="{{ $val['pred34'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred35" id="pred35" value="{{ $val['pred35'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred36" id="pred36" value="{{ $val['pred36'] }}">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Четверг</h4>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred41" id="pred41" value="{{ $val['pred41'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred42" id="pred42" value="{{ $val['pred42'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred43" id="pred43" value="{{ $val['pred43'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred44" id="pred44" value="{{ $val['pred44'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred45" id="pred45" value="{{ $val['pred45'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred46" id="pred46" value="{{ $val['pred46'] }}">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Пятница</h4>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred51" id="pred51" value="{{ $val['pred51'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred52" id="pred52" value="{{ $val['pred52'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred53" id="pred53" value="{{ $val['pred53'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred54" id="pred54" value="{{ $val['pred54'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred55" id="pred55" value="{{ $val['pred55'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred56" id="pred56" value="{{ $val['pred56'] }}">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Суббота</h4>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Пары</th>
+                                            <th scope="col">Предметы</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <input type="text" name="pred61" id="pred61" value="{{ $val['pred61'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <input type="text" name="pred62" id="pred62" value="{{ $val['pred62'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <input type="text" name="pred63" id="pred63" value="{{ $val['pred63'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <input type="text" name="pred64" id="pred64" value="{{ $val['pred64'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <input type="text" name="pred65" id="pred65" value="{{ $val['pred65'] }}">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <input type="text" name="pred66" id="pred66" value="{{ $val['pred66'] }}">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+                            <input type="hidden" name="save" value="on">
                             <button type="submit" class="btn btn-primary">Сохранить</button>
                         </form>
+                        </div>
                         <!-- /.card -->
                     </div>
                     <!--/.col (left) -->
