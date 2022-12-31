@@ -162,10 +162,10 @@
                             <tbody>
                             @foreach ($news as $one_news)
                                 <tr>
-                                    <th scope="row">{{ $loop->index }}</th>
+                                    <th scope="row">{{ $loop->iteration }}</th>
                                     <td>{{ $one_news->id }}</td>
                                     <td>{{ $one_news->title }}</td>
-                                    <td>{{ $one_news->content }}</td>
+                                    <td>{{ Str::limit($one_news->content,20,' (...)' ) }}</td>
                                     <td>
                                         <a href="{{ asset('editnews/'.$one_news->id) }}">Изменить</a>
                                     </td>
@@ -244,10 +244,10 @@
                             <tbody>
                             @foreach ($ourpeople as $one_ourpeople)
                                 <tr>
-                                    <th scope="row">{{ $loop->index }}</th>
+                                    <th scope="row">{{ $loop->iteration }}</th>
                                     <td>{{ $one_ourpeople->id }}</td>
                                     <td>{{ $one_ourpeople->title }}</td>
-                                    <td>{{ $one_ourpeople->content }}</td>
+                                    <td>{{ Str::limit($one_ourpeople->content,20,' (...)' ) }}</td>
                                     <td>
                                         <a href="{{ asset('editourpeople/'.$one_ourpeople->id) }}">Изменить</a>
                                     </td>
@@ -325,10 +325,10 @@
                             <tbody>
                             @foreach ($konkurs as $one_konkurs)
                                 <tr>
-                                    <th scope="row">{{ $loop->index }}</th>
+                                    <th scope="row">{{ $loop->iteration }}</th>
                                     <td>{{ $one_konkurs->id }}</td>
                                     <td>{{ $one_konkurs->title }}</td>
-                                    <td>{{ $one_konkurs->content }}</td>
+                                    <td>{{ Str::limit($one_konkurs->content,20,' (...)' ) }}</td>
                                     <td>
                                         <a href="{{ asset('editkonkurs/'.$one_konkurs->id) }}">Изменить</a>
                                     </td>

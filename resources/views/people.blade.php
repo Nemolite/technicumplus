@@ -75,7 +75,7 @@
             <script>
                 ourstruc = [
                     "{{ $one_ourpeople->title }}",
-                    "{{ $one_ourpeople->content }}",
+                    "{{ Str::limit($one_ourpeople->content,230,' (...)') }}",
                     "{{ asset('public/storage/folder/'.$one_ourpeople->url) }}"
                 ]
                 our.push(ourstruc);

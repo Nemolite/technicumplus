@@ -13,10 +13,6 @@ class DBtimetable
      * Извлечение данных из базы
      */
     public function builder($curs,$gr){
-        $raspis = DB::table('timetables')
-            ->where('curs', '=', $curs)
-            ->where('gr', '=', $gr)
-            ->get();
 
         $dayarr = array(
             1=>'Понедельник',
@@ -27,18 +23,40 @@ class DBtimetable
             6=>'Суббота'
         );
 
+        $raspis_count = DB::table('timetables')
+            ->where('curs', '=', $curs)
+            ->where('gr', '=', $gr)
+            ->doesntExist();
+        // обнуляем массив
         $out_raspis = [];
-        foreach ($raspis as $one_ras) {
-            // формируем pred66 - 4-позиция в строке день, 5-позиция в строке - пара
-            $key_ras = 'pred' . array_search($one_ras->day, $dayarr) . $one_ras->para;
-            $val_ras = $one_ras->pred;
-            if ('zero'==$val_ras){
-                $out_raspis[$key_ras] = '------';
-            } else {
-                $out_raspis[$key_ras] = $val_ras;
-            }
 
-        }
+        if ($raspis_count) {
+            // если в бд нет данных, то массив заполняем строками ------
+           for($i=1;$i<=6;$i++){
+                for($j=1;$j<=6;$j++){
+                    $key_ras = 'pred' . $i . $j;
+                    $out_raspis[$key_ras] = '------';
+                }
+            }
+        } else {
+            // если есть данные в бд, то массив запоняем из бд
+            $raspis = DB::table('timetables')
+                ->where('curs', '=', $curs)
+                ->where('gr', '=', $gr)
+                ->get();
+
+            foreach ($raspis as $one_ras) {
+                // формируем pred66 - 4-позиция в строке день, 5-позиция в строке - пара
+                $key_ras = 'pred' . array_search($one_ras->day, $dayarr) . $one_ras->para;
+                $val_ras = $one_ras->pred;
+                if ('zero'==$val_ras){
+                    $out_raspis[$key_ras] = '------';
+                } else {
+                    $out_raspis[$key_ras] = $val_ras;
+                }
+
+            } // foreach
+        } // else
 
         return $out_raspis;
     }
@@ -77,4 +95,5 @@ class DBtimetable
             }
         }
     }
+
 }
